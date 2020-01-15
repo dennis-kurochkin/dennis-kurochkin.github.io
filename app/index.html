@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Home - kurochkin.me</title>
+
+    <meta name="theme-color" content="#303030">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#303030">
+
+    <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-sprite="images/sprite.svg">
+
+    <!-- BEGIN layout -->
+    <div class="layout">
+
+        <!-- BEGIN layout__top -->
+        <div class="layout__top">
+
+            <!-- BEGIN header -->
+            <header class="cmn-header">
+                <div class="container">
+                    <div class="fx fx-aic fx-jcsb cmn-header__inner">
+                        <a href="" class="cmn-header__logo"><span>kurochkin.</span>me</a>
+                        <nav class="cmn-header__nav">
+                            <ul class="fx cmn-header__nav-list">
+                                <li class="cmn-header__nav-li">
+                                    <a href="" class="cmn-header__nav-link">Home</a>
+                                </li>
+                                <li class="cmn-header__nav-li">
+                                    <a href="" class="cmn-header__nav-link">Portfolio</a>
+                                </li>
+                                <li class="cmn-header__nav-li">
+                                    <a href="" class="cmn-header__nav-link">About me</a>
+                                </li>
+                                <li class="cmn-header__nav-li">
+                                    <a href="" class="cmn-header__nav-link">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="" class="btn cmn-header__contact-btn">Contact me</a>
+                    </div>
+                </div>
+            </header>
+            <!-- END header -->
+
+            <!-- BEGIN main -->
+            <main class="cmn-main">
+
+                <div class="hp-hero">
+                    <div class="hp-hero__wrapper">
+                        <div class="container">
+                            <h1 class="hp-hero__title">
+                                <span class="hp-hero__title-bigger">Hello!</span><br>
+                                I am Dennis <span class="hp-hero__title-last-name">Kurochkin</span>
+                            </h1>
+                            <p class="hp-hero__text">I am freelance Front-End Engeneer</p>
+                            <div class="fx hp-hero__actions">
+                                <a href="" class="btn btn--lg hp-hero__actions-contact">Contact me</a>
+                                <a href="" class="btn btn--lg">View portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hp-about">
+                    <div class="container">
+                        <div class="fx hp-about__inner">
+                            <div class="hp-about__media">
+                                <img src="images/hp-about/sample.jpg" alt="" class="hp-about__media-img">
+                            </div>
+                            <div class="hp-about__content">
+                                <h2 class="hp-about__title">About me</h2>
+                                <p class="hp-about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, voluptatem velit molestiae ratione deserunt molestias impedit perferendis veritatis quos laborum!</p>
+                                <p class="hp-about__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime nostrum incidunt temporibus delectus illo error, deleniti fugit aliquid? Ipsam voluptas sit rerum quis atque nostrum, deleniti quo, sunt possimus dolorem, in nihil non aliquid temporibus.</p>
+                                <a href="" class="hp-about__email-link">dennis.kurochkin@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <!-- END main -->
+
+        </div>
+        <!-- END layout__top -->
+
+        <!-- BEGIN layout__bottom -->
+        <div class="layout__bottom">
+
+            <!-- BEGIN footer -->
+            <footer class="cmn-footer">
+                <div class="container">
+
+                </div>
+            </footer>
+            <!-- END footer -->
+
+            <!-- START popups nav -->
+            <h2>Попапы:</h2>
+            <ul>
+                <li><a href="#popup-consult" class="js-open-popup-link">Обратный звонок</a></li>
+                <li><a href="#popup-success" class="js-open-popup-link">Успешная отправка формы</a></li>
+            </ul>
+            <!-- FINISH popups nav -->
+
+        </div>
+        <!-- END layout__bottom -->
+
+    </div>
+    <!-- END layout -->
+
+    <!-- START popups -->
+    <div class="hide">
+
+        <div class="cmn-popup cmn-popup--consult" id="popup-consult">
+            <div class="cmn-popup__inner">
+                <h3 class="cmn-popup__title">Обратный звонок</h3>
+                <p class="cmn-popup__subtitle">
+                    Заполните форму<br>
+                    и закажите обратный звонок
+                </p>
+                <form class="form cmn-popup__form">
+                    <div class="form__row">
+                        <div class="form__input">
+                            <input type="text" class="form__input-input" placeholder="Ваше имя" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <input type="text" class="form__input-input" placeholder="Ваш телефон" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <button type="submit" class="btn form__btn">Заказать звонок</button>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__agree">
+                            <input type="checkbox" class="form__agree-checkbox" id="form-agree-1" checked hidden>
+                            <label for="form-agree-1" class="form__agree-label">
+                                <span class="form__agree-icon">
+
+                                </span>
+                                <span class="form__agree-text">
+                                    Вы соглашаетесь с <a href="">политикой конфиденциальности</a> и условиями
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cmn-popup cmn-popup--success" id="popup-success">
+            <div class="cmn-popup__inner">
+                <div class="cmn-popup__success-img">
+                    <svg class="icon-svg">
+                        <use xlink:href="images/sprite.svg#1"></use>
+                    </svg>
+                </div>
+                <h3 class="cmn-popup__title">Заявка отправлена!</h3>
+                <p class="cmn-popup__subtitle">
+                    Наши менеджеры скоро вам перезвонят
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- END popups -->
+
+    <script src="js/all.min.js"></script>
+
+</body>
+
+</html>

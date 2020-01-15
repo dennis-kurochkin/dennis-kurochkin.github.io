@@ -1,0 +1,60 @@
+.cmn-header {
+    padding: 20px 0;
+
+    &__logo {
+        font-family: 'Vesper Libre';
+        font-size: 26px;
+        color: $color-black;
+
+        span {
+            @include text-gradient($gradient-accent-revert);
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    &__nav {
+        &-list {
+            @include list-reset();
+        }
+
+        &-li {
+            &+li {
+                margin-left: 10px;
+            }
+        }
+
+        &-link {
+            position: relative;
+            padding: 15px 25px;
+            color: $color-black;
+            font-size: 16px;
+            text-transform: uppercase;
+
+            &::before {
+                content: '';
+                position: absolute;
+                @include absolute-centering();
+                @include box(100%);
+                left: 25%;
+                z-index: -1;
+                background: $color-black;
+                opacity: 0;
+                @include transition();
+            }
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $color-white;
+
+                &::before {
+                    left: 50%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

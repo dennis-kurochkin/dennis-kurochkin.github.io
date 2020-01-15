@@ -1,0 +1,51 @@
+.hp-about {
+    @include section-padding-md();
+
+    &__media {
+        position: relative;
+        width: calc(45% - 40px);
+        max-height: 500px;
+        margin: 0 40px 0 0;
+
+        &::after {
+            content: '';
+            @include absolute-centering();
+            left: calc(50% - 20px);
+            top: calc(50% + 20px);
+            z-index: 1;
+            @include box(100%);
+            background: $gradient-accent;
+            border-radius: 15px;
+        }
+
+        &-img {
+            position: relative;
+            z-index: 2;
+            @include box(100%);
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+
+    &__content {
+        width: 55%;
+    }
+
+    &__title {
+        margin: 0 0 30px;
+    }
+
+    &__text {
+        font-size: 20px;
+
+    }
+
+    &__email-link {
+        display: inline-block;
+        margin: 20px 0 0;
+        padding-bottom: 5px;
+        font-size: 22px;
+        @include text-gradient($gradient-accent);
+        border-bottom: 2px solid $color-purple;
+    }
+}

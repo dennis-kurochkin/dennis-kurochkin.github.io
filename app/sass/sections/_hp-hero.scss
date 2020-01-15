@@ -1,0 +1,71 @@
+.hp-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px);
+    color: $color-white;
+    background: url(../images/hp-hero/bg.jpg);
+    background-size: cover;
+
+    &::before {
+        content: '';
+        @include absolute-centering();
+        @include box(100%);
+        background: rgba($color-black, .3);
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__title {
+        margin: 0 0 40px;
+        font-weight: bold;
+        font-size: 92px;
+
+        &-bigger {
+            font-size: 120px;
+        }
+
+        &-last-name {
+            position: relative;
+            @include text-gradient($gradient-accent);
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 10px;
+                left: 0px;
+                @include box(90px);
+                border-radius: 50%;
+                background: $color-white;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 10px;
+                left: 100px;
+                padding: 0;
+                @include box(80%, 80%);
+                background: $color-white;
+            }
+        }
+    }
+
+    &__text {
+        margin: 0 0 70px;
+        font-size: 36px;
+    }
+
+    &__actions {
+        &-contact {
+            margin: 0 15px 0 0;
+        }
+    }
+}
