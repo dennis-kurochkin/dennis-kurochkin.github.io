@@ -13,9 +13,16 @@ strong {
 }
 
 a {
-    color: $link-color;
+    color: $color-black;
     -webkit-tap-highlight-color: transparent;
     @include transition();
+
+    &.gradient {
+        color: $color-pink;
+        @include text-gradient($gradient-accent());
+        -webkit-tap-highlight-color: transparent;
+        @include transition();
+    }
 }
 
 p,
