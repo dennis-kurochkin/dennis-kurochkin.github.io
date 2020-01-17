@@ -1,0 +1,31 @@
+.cmn-contacts {
+    position: relative;
+    @include section-padding-lg();
+    color: $color-white;
+    text-align: center;
+    background: url(../images/cmn-contacts/bg.jpg) center center;
+    background-size: cover;
+
+    &::after {
+        content: '';
+        @include absolute-centering();
+        @include box(100%);
+        background: rgba($color-black, .3);
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin: 0 0 15px;
+    }
+
+    &__text {
+        font-size: 20px;
+        margin: 0 0 30px;
+    }
+}
