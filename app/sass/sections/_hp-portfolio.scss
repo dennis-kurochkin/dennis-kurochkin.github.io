@@ -1,0 +1,22 @@
+.hp-portfolio {
+    @include section-padding-sm();
+
+    &__title {
+        margin: 0 0 20px;
+    }
+
+    &__subtitle {
+        margin: 0 0 40px;
+        font-size: 20px;
+    }
+
+    &__inner {
+
+    }
+
+    &__project {
+        &+.hp-portfolio__project {
+            margin-top: 20px;
+        }
+    }
+}

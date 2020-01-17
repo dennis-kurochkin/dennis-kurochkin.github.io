@@ -46,12 +46,14 @@ Naming prefixes:
 @import "components/buttons";
 @import "components/popups";
 @import "components/lists";
+@import "components/hp-portfolio-project";
 
 
 /* Sections & Pages */
 
 @import "sections/cmn-header";
+@import "sections/cmn-footer";
 @import "sections/hp-hero";
 @import "sections/hp-about";
 @import "sections/hp-skills";
-@import "sections/cmn-footer";
+@import "sections/hp-portfolio";
