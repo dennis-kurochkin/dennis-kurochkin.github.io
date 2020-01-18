@@ -1,3 +1,58 @@
 .cmn-footer {
+    position: relative;
+    @include section-padding-sm();
+    color: $color-white;
+    background: $color-black;
+    overflow: hidden;
     
+    &::before {
+        content: '';
+        @include absolute-x-centering();
+        bottom: 0;
+        @include box(110%);
+        box-shadow: inset 0 0 10px rgba($color-gray, 1);
+        pointer-events: none;
+    }
+
+    &__inner {
+        margin: 0 0 30px;
+    }
+
+    &__credits,
+    &__social {
+        width: 20%;
+    }
+
+    &__credits {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+
+    &__nav {
+        @include list-reset();
+
+        &-li {
+            margin: -10px 0;
+        }
+
+        &-link {
+            display: block;
+            padding: 10px 20px;
+            color: $color-white;
+
+            &:hover,
+            &:focus {
+                @include text-gradient($gradient-accent);
+            }
+        }
+    }
+
+    &__created {
+        max-width: 50%;
+        margin: 0 auto;
+        font-size: 14px;
+        color: $color-gray;
+    }
 }
