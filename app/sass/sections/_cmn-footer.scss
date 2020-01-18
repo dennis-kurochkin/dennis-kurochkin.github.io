@@ -8,9 +8,9 @@
     &::before {
         content: '';
         @include absolute-x-centering();
-        bottom: 0;
+        top: 0;
         @include box(110%);
-        box-shadow: inset 0 0 10px rgba($color-gray, 1);
+        box-shadow: inset 0 0 20px rgba($color-gray, .5);
         pointer-events: none;
     }
 
@@ -24,10 +24,18 @@
     }
 
     &__credits {
-        text-transform: uppercase;
+        margin: 0;
         font-size: 14px;
         letter-spacing: 1px;
-        margin: 0;
+
+        a {
+            color: $color-white;
+
+            &:hover,
+            &:focus {
+                @include text-gradient($gradient-accent);
+            }
+        }
     }
 
     &__nav {
