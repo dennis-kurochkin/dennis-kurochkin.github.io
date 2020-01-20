@@ -354,11 +354,6 @@ template {
     display: none !important
 }
 
-ul[class],
-ol[class] {
-    padding: 0;
-}
-
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;

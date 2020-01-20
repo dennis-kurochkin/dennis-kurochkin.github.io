@@ -64,7 +64,7 @@
 
 
 @mixin outline {
-    outline: 2px solid rgba(0, 74, 221, 0.5);
+    outline: 2px solid rgba($color-purple, 0.5);
     outline-offset: 4px;
 }
 

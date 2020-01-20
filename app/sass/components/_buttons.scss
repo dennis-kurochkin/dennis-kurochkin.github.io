@@ -4,12 +4,15 @@
     color: $color-white;
     font-size: 16px;
     background: $color-black;
-    border-radius: 5px;
-
+    border-radius: 3px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border: 3px solid $color-white;
+    
     &:hover,
     &:focus {
         color: $color-white;
-        background: $gradient-accent;
+        background-image: $gradient-accent;
 
     }
 
@@ -21,5 +24,42 @@
     &--lg {
         padding: 22px 50px;
         font-size: 18px;
+    }
+}
+
+.btn-email {
+    @include button-defaults();
+    // display: flex;
+    align-items: center;
+    padding: 25px 70px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: $color-white;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -5px;
+        left: -5px;
+        @include box(100%);
+        background: $gradient-accent;
+        border-radius: 5px;
+        @include transition();
+    }
+
+    svg {
+        @include box(25px);
+        margin: 0 0 0 10px;
+        color: $color-black;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-black;
+
+        &::before {
+            top: 5px;
+        }
     }
 }

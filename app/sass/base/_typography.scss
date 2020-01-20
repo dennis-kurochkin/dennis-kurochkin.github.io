@@ -15,7 +15,11 @@ strong {
 a {
     color: $color-black;
     -webkit-tap-highlight-color: transparent;
-    @include transition();
+    @include transition-no-outline();
+
+    &:focus {
+        @include outline();
+    }
 
     &.gradient {
         color: $color-pink;
