@@ -10,7 +10,7 @@
         content: '';
         @include absolute-centering();
         @include box(100%);
-        background: rgba($color-black, .3);
+        background: rgba($color-black, .5);
     }
 
     &__inner {
