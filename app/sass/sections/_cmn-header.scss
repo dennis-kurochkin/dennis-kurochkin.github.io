@@ -3,15 +3,7 @@
     overflow: hidden;
     // border-bottom: 3px solid $color-purple;
 
-    &::before {
-        content: '';
-        @include absolute-x-centering();
-        z-index: 3;
-        bottom: 0;
-        @include box(120%);
-        box-shadow: inset 0 0 10px rgba($color-gray, .5);
-        pointer-events: none;
-    }
+  
 
     &__inner {
         height: 85px;
@@ -21,11 +13,11 @@
         position: relative;
         display: flex;
         align-items: center;
-        font-size: 18px;
+        font-size: 16px;
         color: $color-black;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         line-height: 1;
 
         &::before {
@@ -129,9 +121,9 @@
             display: flex;
             @include flex-centering();
             @include box(100%);
-            padding: 0 20px;
-            color: $color-white;
-            background: $color-black;
+            padding: 0 15px;
+            color: $color-black;
+            @include transition(background)
 
             &:focus,
             &:hover {
@@ -140,7 +132,7 @@
             }
 
             svg {
-                @include box(25px);
+                @include box(20px);
             }
         }
     }

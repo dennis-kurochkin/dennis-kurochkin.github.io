@@ -7,13 +7,22 @@
     border-radius: 3px;
     font-weight: 400;
     letter-spacing: 0.5px;
-    border: 3px solid $color-white;
     
     &:hover,
     &:focus {
         color: $color-white;
         background-image: $gradient-accent;
+    }
 
+    &--gradient-reverse {
+        &:hover,
+        &:focus {
+            background-image: $gradient-accent-revert;
+        }
+    }
+    
+    &--bordered {
+        border: 3px solid $color-white;
     }
 
     &--sm {
