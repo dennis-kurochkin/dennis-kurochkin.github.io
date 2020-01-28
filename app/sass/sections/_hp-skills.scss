@@ -33,7 +33,7 @@
         font-size: 22px;
         border-bottom: 2px solid transparent;
         margin: 0 0 0 40px;
-        
+
         &::before {
             content: '';
             @include absolute-y-centering();
@@ -41,11 +41,11 @@
             @include box(20px, 4px);
             background: #652B73;
         }
-        
+
         &:hover,
         &:focus {
             text-decoration: underline;
-            
+
             border-color: rgba($color-gray, .5);
         }
 
