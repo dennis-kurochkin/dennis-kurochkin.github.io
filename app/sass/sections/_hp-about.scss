@@ -7,6 +7,10 @@
         max-height: 550px;
         margin: 0 40px 0 0;
 
+        @include desktop-ultra {
+            max-height: 500px;
+        }
+
         &::after {
             content: '';
             @include absolute-centering();
@@ -37,6 +41,16 @@
 
     &__text {
         font-size: 20px;
+
+        @include desktop-ultra {
+            font-size: 18px;
+        }
+    }
+
+    .hp-about__text {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     &__email-link {

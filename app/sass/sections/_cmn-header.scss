@@ -1,12 +1,25 @@
 .cmn-header {
     position: relative;
     overflow: hidden;
-    // border-bottom: 3px solid $color-purple;
-
-  
 
     &__inner {
         height: 85px;
+
+        @include desktop-ultra {
+            height: 80px;
+        }
+
+        @include desktop-wide {
+            height: 75px;
+        }
+
+        @include desktop {
+            height: 70px;
+        }
+
+        @include laptop {
+            height: 65px;
+        }
     }
 
     &__logo {
@@ -20,20 +33,37 @@
         letter-spacing: 2px;
         line-height: 1;
 
+        @include desktop {
+            line-height: 1.1;
+            letter-spacing: 0px;
+        }
+
         &::before {
             content: '';
             @include absolute-centering();
             z-index: 1;
-            @include box(110%, 100%);
+            @include box(calc(100% + 30px), 100%);
             background: $color-light-gray;
             opacity: 0;
             @include transition();
+            
+            @include desktop-wide {
+                @include box(calc(100% + 20px), 100%);
+            }
         }
 
         span {
             position: relative;
             z-index: 2;
             @include text-gradient($gradient-accent-revert);
+        }
+
+        br {
+            display: none;
+
+            @include desktop {
+                display: inline;
+            }
         }
 
         &:hover,
@@ -53,6 +83,13 @@
 
     &__nav {
         margin: 0 30px 0 auto;
+
+        @include desktop {
+            position: relative;
+            right: -2.5%;
+            margin: 0 auto;
+        }
+
         &-list {
             @include list-reset();
         }
@@ -61,7 +98,7 @@
             display: flex;
 
             &+li {
-                // border-left: 1px solid $color-light-gray;
+                border-left: 1px solid $color-light-gray;
             }
 
             &--current {
@@ -77,6 +114,10 @@
             color: $color-black;
             font-size: 16px;
             text-transform: lowercase;
+
+            @include laptop {
+                padding: 0 20px;
+            }
 
             &::before {
                 content: '';
@@ -110,11 +151,10 @@
 
     &__social {
         @include list-reset();
-        padding: 0 10px;
 
         &-li {
             &+li {
-                margin-left: 3px;
+                margin-left: 2px;
             }
         }
 
@@ -124,6 +164,7 @@
             @include box(100%);
             padding: 0 15px;
             color: $color-black;
+            background: $color-light-gray;
             @include transition(background);
 
             &:focus,

@@ -3,4 +3,27 @@
     max-width: 90%;
     margin: 0 auto;
     padding: 0 $container-padding;
+
+    @include desktop-wide {
+        max-width: 95%;
+    }
+}
+
+.container-fluid {
+    width: 1700px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include desktop-ultra {
+        padding: 0 25px;
+    }
+
+    @include desktop-wide {
+        padding: 0 20px;
+    }
+
+    @include desktop {
+        padding: 0 15px;
+    }
 }

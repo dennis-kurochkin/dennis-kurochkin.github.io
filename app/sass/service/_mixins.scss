@@ -118,6 +118,12 @@
 
 
 //.block { @include desktop { @content; } }
+@mixin desktop-ultra {
+    @media (max-width: 1700px) {
+        @content;
+    }
+}
+
 @mixin desktop-wide {
     @media (max-width: 1400px) {
         @content;
@@ -189,6 +195,10 @@
 @mixin section-padding-lg {
     padding: 150px 0;
 
+    @include desktop-ultra {
+        padding: 100px 0 110px;
+    }
+
     @include desktop-wide {
         padding: 80px 0;
     }
@@ -228,6 +238,10 @@
 
 @mixin section-padding-md {
     padding: 70px 0;
+
+    @include desktop-wide() {
+        padding: 60px 0;
+    }
 }
 
 @mixin section-padding-top-md {

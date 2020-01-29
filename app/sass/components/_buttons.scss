@@ -23,6 +23,10 @@
     
     &--bordered {
         border: 4px solid $color-white;
+
+        @include laptop {
+            border-width: 3px;
+        }
     }
 
     &--sm {
@@ -33,6 +37,14 @@
     &--lg {
         padding: 22px 50px;
         font-size: 18px;
+
+        @include laptop {
+            padding: 20px 40px;
+        }
+
+        @include tablet-lg {
+            font-size: 16px;
+        }
     }
 }
 
