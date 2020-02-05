@@ -15,7 +15,11 @@
     }
 
     @include desktop-wide {
-        min-height: calc(100vh - 75px);
+        min-height: 700px
+    }
+
+    @include desktop {
+        min-height: 550px;
     }
 
     @include laptop {
