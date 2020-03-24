@@ -30,7 +30,7 @@
         content: '';
         @include absolute-centering();
         @include box(100%);
-        background: rgba($color-black, .3);
+        // background: rgba($color-black, .3);
     }
 
     &::after {
@@ -39,7 +39,7 @@
         z-index: 3;
         top: 0;
         @include box(120%);
-        box-shadow: inset 0 0 15px rgba($color-gray, 1);
+        // box-shadow: inset 0 0 15px rgba($color-gray, 1);
         pointer-events: none;
     }
 
