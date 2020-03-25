@@ -21,6 +21,13 @@ a {
         @include outline();
     }
 
+    &:hover,
+    &:focus {
+        color: $color-pink;
+        text-decoration: underline;
+        text-decoration-color: rgba($color-pink, .5);
+    }
+
     &.gradient {
         color: $color-pink;
         @include text-gradient($gradient-accent());

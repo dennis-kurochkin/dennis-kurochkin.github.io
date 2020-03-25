@@ -6,6 +6,7 @@
         width: calc(40% - 40px);
         max-height: 550px;
         margin: 0 40px 0 0;
+        padding: 0 0 10px;
 
         @include desktop-ultra {
             max-height: 500px;
@@ -23,11 +24,26 @@
         }
 
         &-img {
+            height: 100%;
+            margin: 0 0 20px;
+
+            img {
+                position: relative;
+                z-index: 2;
+                @include box(100%);
+                object-fit: cover;
+                object-position: center bottom;
+                border-radius: 15px;
+            }
+        }
+
+        &-cta {
             position: relative;
             z-index: 2;
-            @include box(100%);
-            object-fit: cover;
-            border-radius: 15px;
+
+            .btn {
+                width: 90%;
+            }
         }
     }
 
@@ -58,6 +74,5 @@
         margin: 0 0 0 5px;
         font-size: 20px;
         @include text-gradient($gradient-accent);
-        border-bottom: 2px solid $color-purple;
     }
 }

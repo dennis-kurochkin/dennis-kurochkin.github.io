@@ -38,6 +38,7 @@
         display: flex;
         @include flex-centering;
         @include box(50px);
+        margin: 0 10% 0 0;
         padding: 2px 0 0 1px;
         background: $gradient-accent;
         font-size: 18px;
@@ -63,24 +64,12 @@
     }
 
     &__nav {
-        margin: 0 30px 0 auto;
-
-        @include desktop {
-            position: relative;
-            right: -2.5%;
-            margin: 0 auto;
-        }
-
         &-list {
             @include list-reset();
         }
 
         &-li {
             display: flex;
-
-            &+li {
-                border-left: 1px solid $color-light-gray;
-            }
 
             &--current {
                 font-weight: 700;
@@ -91,32 +80,18 @@
             position: relative;
             display: flex;
             align-items: center;
-            padding: 0 25px;
-            color: $color-black;
+            padding: 0 20px;
+            color: $color-white;
             font-size: 16px;
-            text-transform: lowercase;
 
             @include laptop {
                 padding: 0 20px;
             }
 
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -75%;
-                @include box(100%, 100%);
-                z-index: -1;
-                background: $color-light-gray;
-                // border-top: 2px solid $color-purple;
-                opacity: 0;
-                // @include transition();
-            }
-
             &:hover,
             &:focus {
                 text-decoration: none;
-                @include text-gradient($gradient-accent);
+                color: $color-pink;
 
                 &::before {
                     bottom: 0;
@@ -143,19 +118,15 @@
             display: flex;
             @include flex-centering();
             @include box(100%);
-            padding: 0 15px;
-            color: $color-black;
-            background: $color-light-gray;
-            @include transition(background);
+            padding: 10px;
+            color: $color-white;
 
-            &:focus,
-            &:hover {
-                color: $color-white;
-                background-image: $gradient-accent-revert;
+            &:focus {
+                outline-offset: -5px;
             }
 
             svg {
-                @include box(20px);
+                @include box(25px);
             }
         }
     }
