@@ -19,7 +19,23 @@
     <!-- BEGIN layout -->
     <div class="layout">
 
-        <aside class="aside layout__aside">
+        <aside class="aside layout__aside js-aside">
+            <button type="button" class="aside__toggle js-aside-toggle">
+                <svg class="icon-svg aside__toggle-icon">
+                    <use xlink:href="images/sprite.svg#19"></use>
+                </svg>
+            </button>
+            <ul class="aside__nav">
+                <li class="aside__nav-li">
+                    <a href="" class="aside__nav-link">Группы продукции</a>
+                </li>
+                <li class="aside__nav-li">
+                    <a href="" class="aside__nav-link">Технические регламенты</a>
+                </li>
+                <li class="aside__nav-li">
+                    <a href="" class="aside__nav-link">Органы сертификации</a>
+                </li>
+            </ul>
             <a href="/preview/cs/" class="fx fx-center text-center aside__logo aside__section">
                 <svg class="icon-svg aside__logo-icon aside__logo-icon--dark" width="25" height="31">
                     <use xlink:href="images/sprite.svg#7"></use>
@@ -248,6 +264,11 @@
 
             <!-- BEGIN header -->
             <header class="fx fx-aic header main__section main__section--no-bg main__section--no-padding">
+                <button type="button" class="header__aside-toggle js-header-aside-toggle">
+                    <svg class="icon-svg header__aside-toggle-icon">
+                        <use xlink:href="images/sprite.svg#18"></use>
+                    </svg>
+                </button>
                 <form action="" class="form-search header__search">
                     <input type="text" class="form-search__input" placeholder="Поиск по сайту...">
                     <button type="submit" class="form-search__btn">
@@ -272,10 +293,24 @@
 
             <section class="hero main__section main__section--no-padding">
                 <div class="fx hero__tabs">
-                    <button class="hero__tabs-tab">Сертификат соответствия</button>
-                    <button class="hero__tabs-tab inactive">Декларация о соответствии</button>
+                    <button class="hero__tabs-tab js-tab-toggle active">Сертификат соответствия</button>
+                    <button class="hero__tabs-tab js-tab-toggle inactive">Декларация о соответствии</button>
                 </div>
-                <article class="hero__tab-content">
+                <article class="hero__tab-content js-tab-content active">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            Сервис навигации по базе данных<br>
+                            деклараций соответствия
+                        </h1>
+                        <p class="hero__caption">Данные за 2016-2020 года</p>
+                    </div>
+                    <div class="hero__media">
+                        <svg class="icon-svg hero__media-img" width="95" height="116">
+                            <use xlink:href="images/sprite.svg#12"></use>
+                        </svg>
+                    </div>
+                </article>
+                <article class="hero__tab-content js-tab-content hidden">
                     <div class="hero__content">
                         <h1 class="hero__title">
                             Сервис навигации по базе данных<br>
@@ -343,843 +378,1681 @@
                 </div>
             </section>
 
-            <section class="main__section">
-                <header class="main__section-header">
-                    <h2 class="main__section-title">Список сертификатов</h2>
-                </header>
-                <div class="cert-list main__cert-list">
-                    <div class="cert-list__row cert-list__header">
-                        <div class="cert-list__cell cert-list__header-cell">
-                            Номер сертификата и наименование продукции
+            <!-- BEGIN tab contents -->
+            <div class="main__section main__section--no-bg main__section--no-padding js-tab-content active">
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">Список сертификатов</h2>
+                    </header>
+                    <div class="cert-list main__cert-list">
+                        <div class="cert-list__row cert-list__header">
+                            <div class="cert-list__cell cert-list__header-cell">
+                                Номер сертификата и наименование продукции
+                            </div>
+                            <div class="cert-list__cell cert-list__header-cell">
+                                Изготовитель
+                            </div>
+                            <div class="cert-list__cell cert-list__header-cell">
+                                Зарег-ан
+                            </div>
                         </div>
-                        <div class="cert-list__cell cert-list__header-cell">
-                            Изготовитель
-                        </div>
-                        <div class="cert-list__cell cert-list__header-cell">
-                            Зарег-ан
-                        </div>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <svg class="icon-svg cert-list__country-icon" width="21" height="11">
+                                        <use xlink:href="images/sprite.svg#17"></use>
+                                    </svg>
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <svg class="icon-svg cert-list__country-icon" width="21" height="11">
+                                        <use xlink:href="images/sprite.svg#17"></use>
+                                    </svg>
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <svg class="icon-svg cert-list__country-icon" width="21" height="11">
+                                        <use xlink:href="images/sprite.svg#17"></use>
+                                    </svg>
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <img src="images/icons-svg/17.svg" class="icon-svg cert-list__country-icon" width="21" height="11" alt="">
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
                     </div>
-                    <a href="" class="cert-list__row cert-list__cert">
-                        <div class="cert-list__cell">
-                            <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
-                            <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                    <footer class="main__section-footer">
+                        <div class="fx fx-jcc main__section-actions">
+                            <a href="" class="btn">Показать еще 40</a>
                         </div>
-                        <div class="cert-list__cell">
-                            <p class="cert-list__country">
-                                <svg class="icon-svg cert-list__country-icon" width="21" height="11">
-                                    <use xlink:href="images/sprite.svg#17"></use>
-                                </svg>
-                                Burberry limited
-                            </p>
-                        </div>
-                        <div class="cert-list__cell">
-                            14 апр<br>
-                            2020
-                        </div>
-                    </a>
-                    <a href="" class="cert-list__row cert-list__cert">
-                        <div class="cert-list__cell">
-                            <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
-                            <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
-                        </div>
-                        <div class="cert-list__cell">
-                            <p class="cert-list__country">
-                                <svg class="icon-svg cert-list__country-icon" width="21" height="11">
-                                    <use xlink:href="images/sprite.svg#17"></use>
-                                </svg>
-                                Burberry limited
-                            </p>
-                        </div>
-                        <div class="cert-list__cell">
-                            14 апр<br>
-                            2020
-                        </div>
-                    </a>
-                    <a href="" class="cert-list__row cert-list__cert">
-                        <div class="cert-list__cell">
-                            <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
-                            <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
-                        </div>
-                        <div class="cert-list__cell">
-                            <p class="cert-list__country">
-                                <svg class="icon-svg cert-list__country-icon" width="21" height="11">
-                                    <use xlink:href="images/sprite.svg#17"></use>
-                                </svg>
-                                Burberry limited
-                            </p>
-                        </div>
-                        <div class="cert-list__cell">
-                            14 апр<br>
-                            2020
-                        </div>
-                    </a>
-                    <a href="" class="cert-list__row cert-list__cert">
-                        <div class="cert-list__cell">
-                            <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
-                            <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
-                        </div>
-                        <div class="cert-list__cell">
-                            <p class="cert-list__country">
-                                <img src="images/icons-svg/17.svg" class="icon-svg cert-list__country-icon" width="21" height="11" alt="">
-                                Burberry limited
-                            </p>
-                        </div>
-                        <div class="cert-list__cell">
-                            14 апр<br>
-                            2020
-                        </div>
-                    </a>
-                </div>
-                <footer class="main__section-footer">
-                    <div class="fx fx-jcc main__section-actions">
-                        <a href="" class="btn">Показать еще 40</a>
+                    </footer>
+                </section>
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">Страны</h2>
+                    </header>
+                    <div class="fx fx-wrap main__countries">
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Европа</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/1.png" alt="" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">42</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Америка</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/2.png" alt="Америка" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">25</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Азия</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/3.png" alt="Азия" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">21</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">СНГ</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/4.png" alt="" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">14</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Африка</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/5.png" alt="Африка" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">11</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Ближний восток</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/6.png" alt="Ближний восток" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">8</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Австралия</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/7.png" alt="Австралия" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">3</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
                     </div>
-                </footer>
-            </section>
+                    <div class="fx fx-wrap main__lists">
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">ТОП КОМПАНИЙ ПО КОЛИЧЕСТВУ СЕРТИФИКАТОВ</h2>
+                    </header>
+                    <div class="fx fx-wrap main__lists">
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="main__section-footer main__section-footer--no-border">
+                        <div class="fx fx-jcc main__section-actions">
+                            <a href="" class="btn">Показать еще 40</a>
+                        </div>
+                    </footer>
+                </section>
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">ТОП ОРГАНОВ СЕРТИФИКАЦИИ ПО КОЛИЧЕСТВУ СЕРТИФИКАТОВ</h2>
+                    </header>
+                    <div class="fx fx-wrap main__lists">
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="main__section-footer main__section-footer--no-border">
+                        <div class="fx fx-jcc main__section-actions">
+                            <a href="" class="btn">Показать еще 40</a>
+                        </div>
+                    </footer>
+                </section>
+            </div>
 
-            <section class="main__section">
-                <header class="main__section-header">
-                    <h2 class="main__section-title">Страны</h2>
-                </header>
-                <div class="fx fx-wrap main__countries">
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">Европа</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/1.png" alt="" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">42</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">Америка</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/2.png" alt="Америка" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">25</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">Азия</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/3.png" alt="Азия" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">21</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">СНГ</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/4.png" alt="" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">14</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">Африка</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/5.png" alt="Африка" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">11</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">Ближний восток</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/6.png" alt="Ближний восток" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">8</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                    <a href="" class="country main__countries-country">
-                        <h3 class="country__title">Австралия</h3>
-                        <span class="country__icon">
-                            <img src="images/countries/7.png" alt="Австралия" class="country__icon-img" width="43" height="38">
-                        </span>
-                        <p class="country__amount">3</p>
-                        <p class="country__amount-caption">страны</p>
-                    </a>
-                </div>
-                <div class="fx fx-wrap main__lists">
-                    <ul class="common-list main__list">
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
+            <div class="main__section main__section--no-bg main__section--no-padding js-tab-content hidden">
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">Список деклараций</h2>
+                    </header>
+                    <div class="cert-list main__cert-list">
+                        <div class="cert-list__row cert-list__header">
+                            <div class="cert-list__cell cert-list__header-cell">
+                                Номер сертификата и наименование продукции
+                            </div>
+                            <div class="cert-list__cell cert-list__header-cell">
+                                Изготовитель
+                            </div>
+                            <div class="cert-list__cell cert-list__header-cell">
+                                Зарег-ан
+                            </div>
+                        </div>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <svg class="icon-svg cert-list__country-icon" width="21" height="11">
+                                        <use xlink:href="images/sprite.svg#17"></use>
                                     </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <svg class="icon-svg cert-list__country-icon" width="21" height="11">
+                                        <use xlink:href="images/sprite.svg#17"></use>
                                     </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <svg class="icon-svg cert-list__country-icon" width="21" height="11">
+                                        <use xlink:href="images/sprite.svg#17"></use>
                                     </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="common-list main__list">
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="main__section">
-                <header class="main__section-header">
-                    <h2 class="main__section-title">ТОП КОМПАНИЙ ПО КОЛИЧЕСТВУ СЕРТИФИКАТОВ</h2>
-                </header>
-                <div class="fx fx-wrap main__lists">
-                    <ul class="common-list main__list">
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="common-list main__list">
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-icon">
-                                    <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
-                                </span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <footer class="main__section-footer main__section-footer--no-border">
-                    <div class="fx fx-jcc main__section-actions">
-                        <a href="" class="btn">Показать еще 40</a>
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
+                        <a href="" class="cert-list__row cert-list__cert">
+                            <div class="cert-list__cell">
+                                <p class="cert-list__title">№ ЕАЭС RU C-GB.HA57.A.00442/20</p>
+                                <p class="cert-list__text">Изделия трикотажные бельевые женские: трусы, пижамы, сорочки ночные, комбинации, боди, юбки нижние, топы из пряжи из искусственных волокон, в том числе с вложением эластомерной нити.</p>
+                            </div>
+                            <div class="cert-list__cell">
+                                <p class="cert-list__country">
+                                    <img src="images/icons-svg/17.svg" class="icon-svg cert-list__country-icon" width="21" height="11" alt="">
+                                    Burberry limited
+                                </p>
+                            </div>
+                            <div class="cert-list__cell">
+                                14 апр<br>
+                                2020
+                            </div>
+                        </a>
                     </div>
-                </footer>
-            </section>
-
-            <section class="main__section">
-                <header class="main__section-header">
-                    <h2 class="main__section-title">ТОП ОРГАНОВ СЕРТИФИКАЦИИ ПО КОЛИЧЕСТВУ СЕРТИФИКАТОВ</h2>
-                </header>
-                <div class="fx fx-wrap main__lists">
-                    <ul class="common-list main__list">
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="common-list main__list">
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator common-list__link-indicator--red"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="common-list__li">
-                            <a href="" class="common-list__link">
-                                <span class="common-list__link-indicator"></span>
-                                <span class="common-list__link-title">Китай</span>
-                                <span class="common-list__link-amount">
-                                    152 804
-                                    <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
-                                        <use xlink:href="images/sprite.svg#13"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <footer class="main__section-footer main__section-footer--no-border">
-                    <div class="fx fx-jcc main__section-actions">
-                        <a href="" class="btn">Показать еще 40</a>
+                    <footer class="main__section-footer">
+                        <div class="fx fx-jcc main__section-actions">
+                            <a href="" class="btn">Показать еще 40</a>
+                        </div>
+                    </footer>
+                </section>
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">Страны</h2>
+                    </header>
+                    <div class="fx fx-wrap main__countries">
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Европа</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/1.png" alt="" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">42</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Америка</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/2.png" alt="Америка" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">25</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Азия</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/3.png" alt="Азия" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">21</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">СНГ</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/4.png" alt="" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">14</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Африка</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/5.png" alt="Африка" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">11</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Ближний восток</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/6.png" alt="Ближний восток" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">8</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
+                        <a href="" class="country main__countries-country">
+                            <h3 class="country__title">Австралия</h3>
+                            <span class="country__icon">
+                                <img src="images/countries/7.png" alt="Австралия" class="country__icon-img" width="43" height="38">
+                            </span>
+                            <p class="country__amount">3</p>
+                            <p class="country__amount-caption">страны</p>
+                        </a>
                     </div>
-                </footer>
-            </section>
+                    <div class="fx fx-wrap main__lists">
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">ТОП КОМПАНИЙ ПО КОЛИЧЕСТВУ деклараций</h2>
+                    </header>
+                    <div class="fx fx-wrap main__lists">
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-icon">
+                                        <img src="images/icons-svg/17.svg" width="21" height="11" alt="">
+                                    </span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="main__section-footer main__section-footer--no-border">
+                        <div class="fx fx-jcc main__section-actions">
+                            <a href="" class="btn">Показать еще 40</a>
+                        </div>
+                    </footer>
+                </section>
+                <section class="main__section">
+                    <header class="main__section-header">
+                        <h2 class="main__section-title">ТОП ОРГАНОВ СЕРТИФИКАЦИИ ПО КОЛИЧЕСТВУ деклараций</h2>
+                    </header>
+                    <div class="fx fx-wrap main__lists">
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="common-list main__list">
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator common-list__link-indicator--red"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="common-list__li">
+                                <a href="" class="common-list__link">
+                                    <span class="common-list__link-indicator"></span>
+                                    <span class="common-list__link-title">Китай</span>
+                                    <span class="common-list__link-amount">
+                                        152 804
+                                        <svg class="icon-svg common-list__link-amount-icon" width="10" height="15">
+                                            <use xlink:href="images/sprite.svg#13"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="main__section-footer main__section-footer--no-border">
+                        <div class="fx fx-jcc main__section-actions">
+                            <a href="" class="btn">Показать еще 40</a>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+            <!-- END tab contents -->
 
             <!-- BEGIN footer -->
             <footer class="text-center footer main__section">
