@@ -1,4 +1,4 @@
-.hp-portfolio {
+.portfolio {
     @include section-padding-md();
 
     &__title {
@@ -15,7 +15,7 @@
     }
 
     &__project {
-        &+.hp-portfolio__project {
+        &+.portfolio__project {
             margin-top: 20px;
         }
     }

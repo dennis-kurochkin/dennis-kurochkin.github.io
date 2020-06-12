@@ -5,3 +5,7 @@
 .text-regular {
   font-weight: $font-weight-regular;
 }
+
+.text-gradient-revert {
+  @include text-gradient($gradient-accent-revert);
+}

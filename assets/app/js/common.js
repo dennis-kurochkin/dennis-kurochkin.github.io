@@ -20,7 +20,7 @@ $(function () {
         midClick: true,
         removalDelay: 300,
         mainClass: 'my-mfp-slide-bottom',
-        closeMarkup: '<button title="Закрыть (ESC)" type="button" class="mfp-close cmn-popup__close-btn">×</button>'
+        closeMarkup: '<button title="Закрыть (ESC)" type="button" class="mfp-close popup__close-btn">×</button>'
     });
 
 
@@ -69,18 +69,18 @@ $(function () {
      * Mobile menu
      */
 
-    $('.js-cmn-header-hamburger').click(function () {
+    $('.js-header-hamburger').click(function () {
         $('body').addClass('overflow-hidden');
         $('.js-overlay').addClass('overlay-active');
         $('.js-layout').addClass('mobile-menu-active');
-        $('.js-cmn-mobile-menu').addClass('active');
+        $('.js-mobile-menu').addClass('active');
     });
 
-    $('.js-cmn-mobile-menu-close').click(function () {
+    $('.js-mobile-menu-close').click(function () {
         $('body').removeClass('overflow-hidden');
         $('.js-overlay').removeClass('overlay-active');
         $('.js-layout').removeClass('mobile-menu-active');
-        $('.js-cmn-mobile-menu').removeClass('active');
+        $('.js-mobile-menu').removeClass('active');
     });
 
     $('.js-overlay').click(function (evt) {
@@ -88,7 +88,7 @@ $(function () {
             $('body').removeClass('overflow-hidden');
             $('.js-overlay').removeClass('overlay-active');
             $('.js-layout').removeClass('mobile-menu-active');
-            $('.js-cmn-mobile-menu').removeClass('active');
+            $('.js-mobile-menu').removeClass('active');
         }
     });
 

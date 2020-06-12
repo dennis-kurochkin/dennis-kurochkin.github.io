@@ -1,10 +1,10 @@
-.cmn-footer {
+.footer {
     position: relative;
     @include section-padding-sm();
     color: $color-white;
     background: $color-black;
     overflow: hidden;
-    
+
     &::before {
         content: '';
         @include absolute-x-centering();

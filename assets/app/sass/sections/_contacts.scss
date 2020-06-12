@@ -1,9 +1,9 @@
-.cmn-contacts {
+.contacts {
     position: relative;
     @include section-padding-lg();
     color: $color-white;
     text-align: center;
-    background: url(../images/cmn-contacts/bg.jpg) center center;
+    background: url(../images/contacts/bg.jpg) center center;
     background-size: cover;
 
     &::after {
@@ -46,7 +46,7 @@
             background: $color-white;
             border-radius: 5px;
 
-            &+.cmn-contacts__social-elem {
+            &+.contacts__social-elem {
                 margin-left: 10px;
             }
 

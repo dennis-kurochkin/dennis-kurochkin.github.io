@@ -1,12 +1,5 @@
 @charset "utf-8";
 
-/*
-Naming prefixes:
-~ cmn - common section/block
-~ hp - homepage
-~ pg - internal page
-*/
-
 /* Service styles and things */
 
 @import "service/variables";
@@ -46,15 +39,16 @@ Naming prefixes:
 @import "components/buttons";
 @import "components/popups";
 @import "components/lists";
-@import "components/hp-portfolio-project";
+@import "components/portfolio-project";
+@import "components/project";
 
 
 /* Sections & Pages */
 
-@import "sections/cmn-header";
-@import "sections/cmn-footer";
-@import "sections/cmn-contacts";
-@import "sections/hp-hero";
-@import "sections/hp-about";
-@import "sections/hp-skills";
-@import "sections/hp-portfolio";
+@import "sections/header";
+@import "sections/footer";
+@import "sections/contacts";
+@import "sections/hero";
+@import "sections/about";
+@import "sections/skills";
+@import "sections/portfolio";

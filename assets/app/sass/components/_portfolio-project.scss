@@ -1,4 +1,4 @@
-.hp-portfolio-project {
+.portfolio-project {
     padding: 30px 50px;
     background: $color-light-gray;
 
@@ -34,11 +34,11 @@
     }
 
     &--media-right {
-        .hp-portfolio-project__inner {
+        .portfolio-project__inner {
             flex-direction: row-reverse;
         }
 
-        .hp-portfolio-project__content {
+        .portfolio-project__content {
             padding-left: 0;
             padding-right: 40px;
         }

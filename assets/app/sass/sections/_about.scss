@@ -1,16 +1,10 @@
-.hp-about {
+.about {
     @include section-padding-lg();
 
     &__media {
         position: relative;
         width: calc(40% - 40px);
-        max-height: 550px;
         margin: 0 40px 0 0;
-        padding: 0 0 10px;
-
-        @include desktop-ultra {
-            max-height: 500px;
-        }
 
         &::after {
             content: '';
@@ -43,6 +37,18 @@
 
             .btn {
                 width: 90%;
+                padding: 18px 30px;
+                border-radius: 7px;
+                background: $color-white;
+                color: $color-black;
+                font-weight: 600;
+                box-shadow: inset 0 0 0 3px $color-black;
+
+                &:hover,
+                &:focus {
+                    color: $color-white;
+                    background: $color-black;
+                }
             }
         }
     }
@@ -63,7 +69,7 @@
         }
     }
 
-    .hp-about__text {
+    .about__text {
         &:last-of-type {
             margin-bottom: 0;
         }

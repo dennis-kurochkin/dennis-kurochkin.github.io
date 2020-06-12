@@ -1,0 +1,74 @@
+.project {
+    display: flex;
+    align-items: flex-start;
+    color: $color-white;
+    background: $gradient-accent;
+    padding: 50px 60px;
+
+    &--batum {
+        background: linear-gradient(130deg, rgba(#322024, .75) 15%, #322024 50%);
+    }
+
+    &__media {
+        width: 50%;
+        margin: 0 30px 0 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+    }
+
+    &__title {
+        margin: 0 0 20px;
+    }
+
+    &__link {
+        margin: 0 0 40px;
+        color: $color-white;
+        font-size: 14px;
+
+        svg {
+            @include box(17px);
+            margin: 0 2px 0 0;
+        }
+
+        &-text {
+            padding-bottom: 1px;
+            border-bottom: 1px dashed $color-white;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-pink-light;
+            text-decoration: none;
+
+            .project__link-text {
+                border-color: $color-pink-light;
+            }
+        }
+    }
+
+    &__about {
+        margin: 0;
+        padding-right: 10%;
+        font-size: 20px;
+    }
+
+    &--md {
+        padding: 35px 40px;
+
+        .project {
+            &__media {
+                width: 40%;
+                margin-right: 25px;
+            }
+
+            &__about {
+                font-size: 16px;
+            }
+        }
+    }
+}
