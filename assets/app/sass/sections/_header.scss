@@ -1,4 +1,3 @@
-
 .header {
     position: relative;
     color: $color-white;
@@ -103,6 +102,29 @@
             &:focus {
                 outline: 0;
             }
+        }
+    }
+
+    &__lang {
+        margin: 0 -10% 0 0;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: $color-white;
+        background: $gradient-accent;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+            text-decoration: none;
+            box-shadow: inset 0 0 0 3px $color-white;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 0 6px $color-white;
         }
     }
 
