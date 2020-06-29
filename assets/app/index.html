@@ -32,37 +32,40 @@
                         <nav class="fx header__nav">
                             <ul class="fx header__nav-list">
                                 <li class="header__nav-li">
-                                    <a href="" class="header__nav-link">Обо мне</a>
+                                    <a href="#anchor-about" class="header__nav-link js-anchor-link">Обо мне</a>
                                 </li>
                                 <li class="header__nav-li">
-                                    <a href="" class="header__nav-link">Работы</a>
+                                    <a href="/projects.html" class="header__nav-link">Работы</a>
                                 </li>
                                 <li class="header__nav-li">
-                                    <a href="" class="header__nav-link">Блог</a>
+                                    <a href="#anchor-skills" class="header__nav-link js-anchor-link">Навыки</a>
                                 </li>
                                 <li class="header__nav-li">
-                                    <a href="" class="header__nav-link">Контакты</a>
+                                    <a href="#anchor-services" class="header__nav-link js-anchor-link">Услуги</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#anchor-contacts" class="header__nav-link js-anchor-link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <a href="" class="header__lang">Eng</a>
+                        <!-- <a href="" class="header__lang">Eng</a> -->
                         <ul class="fx header__social">
                             <li class="header__social-li">
-                                <a href="" class="header__social-link" title="Telegram">
+                                <a href="https://t.me/dennis_kurochkin" target="_blank" rel="noopener noreferrer" class="header__social-link" title="Telegram">
                                     <svg class="icon-svg">
                                         <use xlink:href="images/sprite.svg#2"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="header__social-li" title="GitHub">
-                                <a href="" class="header__social-link">
+                                <a href="https://github.com/dennis-kurochkin" target="_blank" rel="noopener noreferrer" class="header__social-link">
                                     <svg class="icon-svg">
                                         <use xlink:href="images/sprite.svg#3"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="header__social-li" title="LinkedIn">
-                                <a href="" class="header__social-link">
+                                <a href="https://www.linkedin.com/in/dennis-kurochkin/" target="_blank" rel="noopener noreferrer" class="header__social-link">
                                     <svg class="icon-svg">
                                         <use xlink:href="images/sprite.svg#4"></use>
                                     </svg>
@@ -156,7 +159,7 @@
                     </div>
                 </section>
 
-                <section class="about background-gray">
+                <section class="about background-gray" id="anchor-about">
                     <div class="container">
                         <article class="fx about__inner">
                             <div class="fx fx-col about__media">
@@ -178,7 +181,7 @@
                     </div>
                 </section>
 
-                <section class="skills">
+                <section class="skills" id="anchor-skills">
                     <div class="container">
                         <h2 class="skills__title">Навыки</h2>
                         <div class="fx fx-aifs skills__inner">
@@ -210,7 +213,13 @@
                     </div>
                 </section>
 
-                <section class="contacts" id="section-contacts">
+                <section class="services" id="anchor-services">
+                    <div class="container">
+                        <h2 class="services__title">Услуги</h2>
+                    </div>
+                </section>
+
+                <section class="contacts" id="anchor-contacts">
                     <div class="container">
                         <div class="contacts__inner">
                             <!-- OK, lets create something great -->
@@ -285,77 +294,11 @@
             </footer>
             <!-- END footer -->
 
-            <!-- START popups nav -->
-            <!-- <h2>Попапы:</h2>
-            <ul>
-                <li><a href="#popup-consult" class="js-open-popup-link">Обратный звонок</a></li>
-                <li><a href="#popup-success" class="js-open-popup-link">Успешная отправка формы</a></li>
-            </ul> -->
-            <!-- FINISH popups nav -->
-
         </div>
         <!-- END layout__bottom -->
 
     </div>
     <!-- END layout -->
-
-    <!-- START popups -->
-    <div class="hide">
-
-        <div class="popup popup--consult" id="popup-consult">
-            <div class="popup__inner">
-                <h3 class="popup__title">Обратный звонок</h3>
-                <p class="popup__subtitle">
-                    Заполните форму<br>
-                    и закажите обратный звонок
-                </p>
-                <form class="form popup__form">
-                    <div class="form__row">
-                        <div class="form__input">
-                            <input type="text" class="form__input-input" placeholder="Ваше имя" required>
-                        </div>
-                    </div>
-                    <div class="form__row">
-                        <div class="form__input">
-                            <input type="text" class="form__input-input" placeholder="Ваш телефон" required>
-                        </div>
-                    </div>
-                    <div class="form__row">
-                        <button type="submit" class="btn form__btn">Заказать звонок</button>
-                    </div>
-                    <div class="form__row">
-                        <div class="form__agree">
-                            <input type="checkbox" class="form__agree-checkbox" id="form-agree-1" checked hidden>
-                            <label for="form-agree-1" class="form__agree-label">
-                                <span class="form__agree-icon">
-
-                                </span>
-                                <span class="form__agree-text">
-                                    Вы соглашаетесь с <a href="">политикой конфиденциальности</a> и условиями
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="popup popup--success" id="popup-success">
-            <div class="popup__inner">
-                <div class="popup__success-img">
-                    <svg class="icon-svg">
-                        <use xlink:href="images/sprite.svg#1"></use>
-                    </svg>
-                </div>
-                <h3 class="popup__title">Заявка отправлена!</h3>
-                <p class="popup__subtitle">
-                    Наши менеджеры скоро вам перезвонят
-                </p>
-            </div>
-        </div>
-
-    </div>
-    <!-- END popups -->
 
     <script src="js/all.min.js"></script>
 
