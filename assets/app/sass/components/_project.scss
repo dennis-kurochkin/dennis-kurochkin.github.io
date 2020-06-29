@@ -1,10 +1,23 @@
 .project {
+    position: relative;
     display: flex;
     align-items: flex-start;
     color: $color-white;
     background: $gradient-accent;
     padding: 50px 60px;
     @include transition;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include box(100%);
+        background: rgba($color-white, .075);
+        opacity: 0;
+        @include transition;
+        pointer-events: none;
+    }
 
     &--batum {
         background: linear-gradient(130deg, lighten(#322024, 25%) 15%, #322024 50%);
@@ -60,12 +73,12 @@
 
     &:hover,
     &:focus {
-        z-index: 100;
-        transform: scale(1.025);
-        box-shadow: 0 5px 20px rgba($color-black, .2);
-        text-decoration: none;
-        border-radius: 2px;
-        color: $color-white;
+        // transform: scale(1.025);
+
+
+        &::before {
+            opacity: 1;
+        }
     }
 
     &--md {
