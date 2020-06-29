@@ -3,7 +3,7 @@
 
 ## v2.0.0
 
-- [ ] Working links in header
+- [x] Working links in header
 - [ ] Hero with projects
   - [ ] Each project should lead to it's own page
   - [ ] Link to all projects should lead to all projects page
@@ -18,6 +18,10 @@
 
 - [ ] PDF CV link in header, footer, about me
 
+## v2.2.0
+
+- [ ] Add English translation
+
 
 ## v3.0.0
 
@@ -26,3 +30,8 @@
 ## v3.1.0
 
 - [ ] Dark theme
+
+
+## v4.0.0
+
+- [ ] Add German translation
