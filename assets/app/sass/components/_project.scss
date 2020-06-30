@@ -5,6 +5,7 @@
     color: $color-white;
     background: $gradient-accent;
     padding: 50px 60px;
+    overflow: hidden;
     @include transition;
 
     &::before {
@@ -33,6 +34,7 @@
         flex-direction: column;
         align-items: flex-start;
         width: 50%;
+        padding: 30px 0 0;
     }
 
     &__title {
@@ -40,7 +42,7 @@
     }
 
     &__link {
-        margin: 0 0 40px;
+        margin: 0 0 30px;
         color: $color-white;
         font-size: 14px;
 
@@ -82,12 +84,21 @@
     }
 
     &--md {
-        padding: 35px 40px;
+        padding: 35px 35px;
+        align-items: center;
 
         .project {
             &__media {
+                position: relative;
+                top: 0;
                 width: 40%;
-                margin-right: 25px;
+                align-self: flex-end;
+                margin: 0 30px -55px 0;
+                @include transition;
+            }
+
+            &__content {
+                padding-top: 0;
             }
 
             &__link {
@@ -100,6 +111,13 @@
 
             &__about {
                 font-size: 14px;
+            }
+        }
+
+        &:hover,
+        &:focus-within {
+            .project__media {
+                top: -20px;
             }
         }
     }

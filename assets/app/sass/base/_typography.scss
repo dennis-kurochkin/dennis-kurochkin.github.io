@@ -3,8 +3,10 @@
 //@include fonts("NameFont", "NameFont-BoldItalic", 700, italic);
 
 ::selection {
-    color: $color-white;
-    background: $color-gray;
+    color: $color-white !important;
+    background: $color-pink;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: white;
 }
 
 b,
