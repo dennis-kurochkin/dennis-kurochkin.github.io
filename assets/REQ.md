@@ -11,6 +11,7 @@
 - [ ] Skills section
 - [ ] Services section
 - [ ] Working links in contacts section and footer section
+- [x] Add comment for code watchers
 
 ### v2.1.0
 
