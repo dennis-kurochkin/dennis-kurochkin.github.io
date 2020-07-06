@@ -129,6 +129,7 @@ gulp.task('build', ['clean', 'img', 'styles', 'scripts'], function () {
         .pipe(gulp.dest('static/js'));
 
     var buildHtml = gulp.src('app/*.html')
+        .pipe(replace('style.css', 'style.min.css'))
         .pipe(gulp.dest('static'));
 
     var buildPhp = gulp.src('app/*.php')

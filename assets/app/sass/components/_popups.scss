@@ -33,7 +33,7 @@
     }
 
     &__close-btn {
-        @include button-defaults();
+        @include button-setup();
         position: absolute;
         top: 5px;
         right: 5px;

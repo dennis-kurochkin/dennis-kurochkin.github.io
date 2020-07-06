@@ -22,29 +22,69 @@
 
     &__title {
         margin: 0 0 15px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 10px;
+            }
+
+            @include phone-lg {
+                margin: 0 0 5px;
+            }
+        }
     }
 
     &__text {
         font-size: 20px;
         margin: 0 0 40px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 35px;
+            }
+
+            @include tablet-lg {
+                font-size: 18px;
+            }
+
+            @include phone-lg {
+                max-width: 90%;
+                margin: 0 auto 25px;
+                font-size: 16px;
+            }
+        }
     }
 
     &__btn-email {
         margin: 0 0 40px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 35px;
+            }
+        }
     }
 
     &__subtitle {
         margin: 0 0 30px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 25px;
+            }
+        }
     }
 
     &__social {
         &-elem {
             position: relative;
+            top: 0;
             display: flex;
             @include flex-centering();
             @include box(50px);
             background: $color-white;
             border-radius: 5px;
+            @include transition(top);
 
             &+.contacts__social-elem {
                 margin-left: 10px;
@@ -64,6 +104,61 @@
 
             svg {
                 @include box(20px);
+            }
+
+            &:hover,
+            &:focus {
+                top: -3px;
+            }
+
+            &--telegram {
+                svg {
+                    color: darken(#32A9E1, 5%);
+                }
+            }
+
+            &--whatsapp {
+                svg {
+                    color: darken(#50CA5E, 5%);
+                }
+            }
+        }
+    }
+
+    &--fullscreen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+
+        .contacts__social {
+            &-elem {
+                @include box(75px);
+
+                @include media {
+                    @include phone-lg {
+                        @include box(60px);
+                    }
+                }
+
+                &+.contacts__social-elem {
+                    margin-left: 15px;
+                }
+
+                &::before {
+                    top: -5px;
+                    left: -5px;
+                }
+
+                svg {
+                    @include box(35px);
+
+                    @include media {
+                        @include phone-lg {
+                            @include box(28px);
+                        }
+                    }
+                }
             }
         }
     }

@@ -70,11 +70,59 @@ h1,
 h2,
 .h2 {
     font-size: 44px;
+
+    @include media {
+        @include desktop {
+            font-size: 42px;
+        }
+
+        @include laptop {
+            font-size: 38px;
+        }
+
+        @include tablet-lg {
+            font-size: 36px;
+        }
+
+        @include phone-lg {
+            font-size: 32px;
+        }
+
+        @include phone-md {
+            font-size: 28px;
+        }
+
+        @include phone-sm {
+            font-size: 26px;
+        }
+    }
 }
 
 h3,
 .h3 {
     font-size: 32px;
+
+    @include media {
+        @include desktop {
+            font-size: 30px;
+        }
+
+        @include laptop {
+            font-size: 28px;
+        }
+
+        @include tablet-lg {
+            font-size: 26px;
+        }
+
+        @include phone-lg {
+            font-size: 24px;
+        }
+
+        @include phone-sm {
+            font-size: 22px;
+        }
+    }
 }
 
 h4,
