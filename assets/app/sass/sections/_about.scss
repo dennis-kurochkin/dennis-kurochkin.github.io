@@ -62,7 +62,17 @@
     }
 
     &__text {
-        font-size: 20px;
+        font-size: 22px;
+
+        a {
+            color: $color-pink;
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                color: $color-purple;
+            }
+        }
 
         @include desktop-ultra {
             font-size: 18px;

@@ -72,18 +72,6 @@
 =============================================*/
 
 
-@mixin text-gradient($color: transparent) {
-    -webkit-text-fill-color: $color;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-@mixin text-gradient-remove($color: $color-accent) {
-    -webkit-text-fill-color: $color;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-}
-
 @mixin links-all {
 
     &:link,
@@ -113,7 +101,7 @@
 
 
 @mixin outline {
-    outline: 2px solid rgba(0, 74, 221, 0.5);
+    outline: 3px dashed rgba($color-pink, .5);
     outline-offset: 4px;
 }
 

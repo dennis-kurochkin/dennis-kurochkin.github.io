@@ -6,7 +6,7 @@
     background: $gradient-accent;
     padding: 50px 60px;
     overflow: hidden;
-    @include transition;
+    @include transition-no-outline;
 
     &::before {
         content: '';
@@ -22,6 +22,26 @@
 
     &--batum {
         background: linear-gradient(130deg, lighten(#322024, 25%) 15%, #322024 50%);
+    }
+
+    &--kkmir {
+        background: linear-gradient(130deg, lighten(#48B22D, 35%) 15%, #48B22D 50%);
+    }
+
+    &--awatera {
+        background: linear-gradient(130deg, #E1C5F8 15%, #697DDC 50%);
+    }
+
+    &--gkorientir {
+        background: lighten(#f4f4f4, 2.5%);
+    }
+
+    &--ria-glas {
+        background: #394352;
+    }
+
+    &--autosanit {
+        background: linear-gradient(130deg, lighten(#EFF2F3, 25%) 15%, #EFF2F3 50%);
     }
 
     &__media {
@@ -52,17 +72,20 @@
         }
 
         &-text {
-            padding-bottom: 1px;
-            border-bottom: 1px dashed $color-white;
+            position: relative;
+            bottom: -1px;
+            border-bottom: 1px dashed transparent;
+            @include transition;
         }
 
         &:hover,
         &:focus {
-            color: $color-pink-light;
+            color: $color-white;
             text-decoration: none;
 
             .project__link-text {
-                border-color: $color-pink-light;
+                bottom: 0;
+                border-color: $color-white;
             }
         }
     }
@@ -85,7 +108,6 @@
 
     &--md {
         padding: 35px 35px;
-        align-items: center;
 
         .project {
             &__media {
@@ -98,7 +120,7 @@
             }
 
             &__content {
-                padding-top: 0;
+                padding-top: 20px;
             }
 
             &__link {
@@ -129,19 +151,15 @@
         .project {
             &__icon {
                 flex-shrink: 0;
-                @include box(90px);
-                margin: 0 20px 0 0;
+                @include box(90%, 100px);
+                margin: 0;
                 overflow: hidden;
                 border-radius: 5px;
 
                 img {
                     @include box(100%);
-                    object-fit: cover;
+                    object-fit: contain;
                 }
-            }
-
-            &__title {
-                margin: 0;
             }
         }
     }
