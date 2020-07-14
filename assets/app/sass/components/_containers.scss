@@ -1,11 +1,13 @@
 .container {
     width: 1200px;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 $container-padding;
+    padding: 0 25px;
 
-    @include desktop-wide {
-        max-width: 95%;
+    @include media {
+        @include tablet-lg {
+            padding: 0 20px;
+        }
     }
 }
 

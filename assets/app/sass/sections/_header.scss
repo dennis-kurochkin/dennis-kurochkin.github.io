@@ -16,20 +16,16 @@
     &__inner {
         height: 85px;
 
-        @include desktop-ultra {
+        @include desktop-wide {
             height: 80px;
         }
 
-        @include desktop-wide {
+        @include desktop {
             height: 75px;
         }
 
-        @include desktop {
+        @include tablet-lg {
             height: 70px;
-        }
-
-        @include laptop {
-            height: 65px;
         }
     }
 
@@ -37,15 +33,22 @@
         position: relative;
         display: flex;
         @include flex-centering;
+        flex-shrink: 0;
         @include box(50px);
-        margin: 0 10% 0 0;
+        margin: 0 6.5% 0 0;
         padding: 2px 0 0 1px;
-        background: $gradient-accent;
         font-size: 18px;
         color: $color-white;
         font-weight: 600;
         letter-spacing: 2px;
         line-height: 1;
+        background: $gradient-accent-revert;
+
+        @include media {
+            @include tablet-lg {
+                margin: 0;
+            }
+        }
 
         &:hover,
         &:focus {
@@ -63,7 +66,43 @@
         }
     }
 
+    &__toggle {
+        @include button-setup(17px 10px 0);
+        display: flex;
+        flex-direction: column;
+        @include box(50px);
+        background: $gradient-accent;
+
+        &-decorator {
+            width: 100%;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: $color-white;
+            }
+
+            &::before {
+                margin: 0 0 10px;
+            }
+
+            &::after {
+                width: 60%;
+                margin-left: auto;
+            }
+        }
+    }
+
     &__nav {
+        @include media {
+            @include tablet-lg {
+                display: none;
+            }
+        }
+
         &-list {
             @include list-reset();
         }
@@ -85,7 +124,7 @@
             font-size: 16px;
 
             @include laptop {
-                padding: 0 20px;
+                padding: 0 17px;
             }
 
             &:hover,
@@ -128,14 +167,9 @@
         }
     }
 
-    &__social {
-        @include list-reset();
-
-        &-li {
-            &+li {
-                margin-left: 2px;
-            }
-        }
+    &__socials {
+        @include list-reset;
+        margin-right: -10px;
 
         &-link {
             display: flex;
