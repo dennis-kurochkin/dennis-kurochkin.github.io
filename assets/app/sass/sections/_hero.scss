@@ -1,16 +1,56 @@
 .hero {
     padding: 50px 0 80px;
 
+    @include media {
+        @include desktop {
+            padding: 40px 0 70px;
+        }
+
+        @include laptop {
+            padding: 35px 0 60px;
+        }
+
+        @include tablet-lg {
+            padding: 30px 0 50px;
+        }
+
+        @include tablet-sm {
+            padding: 25px 0 45px;
+        }
+
+        @include phablet {
+            padding: 20px 0 40px;
+        }
+
+        @include phone-md {
+            padding: 15px 0 30px;
+        }
+    }
+
     &__title {
         margin: 0 0 20px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 15px;
+            }
+
+            @include tablet-md {
+                br {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__subtitle {
         margin: 0 0 40px;
         font-weight: 600;
 
-        svg {
-            color: initial;
+        @include media {
+            @include desktop {
+                margin: 0 0 30px;
+            }
         }
     }
 

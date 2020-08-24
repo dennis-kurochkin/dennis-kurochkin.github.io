@@ -68,10 +68,26 @@
 
     &__toggle {
         @include button-setup(17px 10px 0);
-        display: flex;
+        display: none;
         flex-direction: column;
         @include box(50px);
         background: $gradient-accent;
+        border-bottom-left-radius: 15px;
+
+        @include media {
+            @include tablet-lg {
+                display: flex;
+            }
+        }
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: 0;
+        //     @include box(10px);
+        //     background: $color-accent;
+        // }
 
         &-decorator {
             width: 100%;

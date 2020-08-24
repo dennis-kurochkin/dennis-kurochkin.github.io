@@ -28,7 +28,7 @@
                 margin: 0 0 10px;
             }
 
-            @include phone-lg {
+            @include phablet {
                 margin: 0 0 5px;
             }
         }
@@ -41,9 +41,15 @@
         @include media {
             @include desktop {
                 margin: 0 0 35px;
-            }
+        }
 
             @include tablet-lg {
+                font-size: 18px;
+            }
+
+            @include phablet {
+                max-width: 80%;
+                margin: 0 auto 25px;
                 font-size: 18px;
             }
 
@@ -62,6 +68,10 @@
             @include desktop {
                 margin: 0 0 35px;
             }
+
+            @include phablet {
+                margin: 0 0 25px;
+            }
         }
     }
 
@@ -71,6 +81,10 @@
         @include media {
             @include desktop {
                 margin: 0 0 25px;
+            }
+
+            @include phablet {
+                margin: 0 0 20px;
             }
         }
     }

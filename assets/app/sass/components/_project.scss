@@ -8,6 +8,16 @@
     overflow: hidden;
     @include transition-no-outline;
 
+    @include media {
+        @include desktop {
+            padding: 45px 50px;
+        }
+
+        @include laptop {
+            padding: 40px 35px;
+        }
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -47,6 +57,16 @@
     &__media {
         width: 50%;
         margin: 0 40px 0 0;
+
+        @include media {
+            @include desktop {
+                margin: 0 30px 0 0;
+            }
+
+            @include laptop {
+                margin: 0 20px 0 0;
+            }
+        }
     }
 
     &__content {
@@ -55,16 +75,28 @@
         align-items: flex-start;
         width: 50%;
         padding: 30px 0 0;
-    }
 
-    &__title {
-        margin: 0 0 20px;
+        @include media {
+            @include desktop {
+                padding: 10px;
+            }
+        }
     }
 
     &__link {
         margin: 0 0 30px;
         color: $color-white;
         font-size: 14px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 25px;
+            }
+
+            @include laptop {
+                margin: 0 0 15px;
+            }
+        }
 
         svg {
             @include box(17px);
@@ -90,10 +122,35 @@
         }
     }
 
+    &__title {
+        margin: 0 0 20px;
+
+        @include media {
+            @include desktop {
+                margin: 0 0 15px;
+            }
+
+            @include laptop {
+                margin: 0 0 10px;
+            }
+        }
+    }
+
     &__about {
         margin: 0;
         padding-right: 10%;
         font-size: 20px;
+
+        @include media {
+            @include desktop {
+                padding-right: 5%;
+                font-size: 18px;
+            }
+
+            @include laptop {
+                font-size: 16px;
+            }
+        }
     }
 
     &:hover,

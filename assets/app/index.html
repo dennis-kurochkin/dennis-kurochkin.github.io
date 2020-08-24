@@ -17,23 +17,29 @@
 </head>
 
 <body data-sprite="images/sprite.svg">
+
     <!--
-        ********************
 
-        Понравился сайт?
+ __  __  __       ______ __  __  ______  ______  ______
+/\ \_\ \/\ \     /\__  _/\ \_\ \/\  ___\/\  == \/\  ___\
+\ \  __ \ \ \    \/_/\ \\ \  __ \ \  __\\ \  __<\ \  __\
+ \ \_\ \_\ \_\      \ \_\\ \_\ \_\ \_____\ \_\ \_\ \_____\
+  \/_/\/_/\/_/       \/_/ \/_/\/_/\/_____/\/_/ /_/\/_____/
 
-        Этот проект находится в открытом доступе. 🔓
-        Код вы можете просмотреть по ссылке:
-        https://github.com/dennis-kurochkin/dennis-kurochkin.github.io
 
-        Я всегда открыт к новым возможностям и предложениям! 💡
-        Пишите мне на dennis.kurochkin@gmail.com 📧
-        или в Telegram 📱 t.me/dennis_kurochkin
+Понравился сайт?
 
-        Сделано с любовью и старанием 💖
+Этот проект находится в открытом доступе. 🔓
+Код вы можете просмотреть по ссылке:
+https://github.com/dennis-kurochkin/dennis-kurochkin.github.io
 
-        ********************
-     -->
+Я всегда открыт к новым возможностям и предложениям! 💡
+Пишите мне на dennis.kurochkin@gmail.com 📧
+или в Telegram 📱 t.me/dennis_kurochkin
+
+Сделано с любовью и старанием 💖
+
+-->
 
     <div class="layout">
 
@@ -51,38 +57,31 @@
                                     <a href="#anchor-about" class="header__nav-link js-anchor-link">Обо мне</a>
                                 </li>
                                 <li class="header__nav-li">
-                                    <a href="/projects.html" class="header__nav-link">Работы</a>
-                                </li>
-                                <li class="header__nav-li">
                                     <a href="#anchor-skills" class="header__nav-link js-anchor-link">Навыки</a>
-                                </li>
-                                <li class="header__nav-li">
-                                    <a href="#anchor-services" class="header__nav-link js-anchor-link">Услуги</a>
                                 </li>
                                 <li class="header__nav-li">
                                     <a href="#anchor-contacts" class="header__nav-link js-anchor-link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <!-- <a href="" class="header__lang">Eng</a> -->
                         <ul class="fx header__socials">
                             <li class="header__socials-li">
                                 <a href="https://t.me/dennis_kurochkin" target="_blank" rel="noopener noreferrer" class="header__socials-link" title="Telegram">
-                                    <svg class="icon-svg">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#2"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="header__socials-li" title="GitHub">
                                 <a href="https://github.com/dennis-kurochkin" target="_blank" rel="noopener noreferrer" class="header__socials-link">
-                                    <svg class="icon-svg">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#3"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="header__socials-li" title="LinkedIn">
                                 <a href="https://www.linkedin.com/in/dennis-kurochkin/" target="_blank" rel="noopener noreferrer" class="header__socials-link">
-                                    <svg class="icon-svg">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#4"></use>
                                     </svg>
                                 </a>
@@ -113,7 +112,7 @@
                                 </div>
                                 <div class="project__content">
                                     <a href="//oldbatum.ru" target="_blank" rel="noopener noreferrer" class="project__link">
-                                        <svg class="icon-svg">
+                                        <svg class="icon-svg" aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#7"></use>
                                         </svg>
                                         <span class="project__link-text">oldbatum.ru</span>
@@ -128,7 +127,7 @@
                                 </div>
                                 <div class="project__content">
                                     <a href="//kkmir.ru" target="_blank" rel="noopener noreferrer" class="project__link">
-                                        <svg class="icon-svg">
+                                        <svg class="icon-svg" aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#7"></use>
                                         </svg>
                                         <span class="project__link-text">kkmir.ru</span>
@@ -143,7 +142,7 @@
                                 </div>
                                 <div class="project__content">
                                     <a href="http://awatera.com" target="_blank" rel="noopener noreferrer" class="project__link">
-                                        <svg class="icon-svg">
+                                        <svg class="icon-svg" aria-hidden="true">
                                             <use xlink:href="images/sprite.svg#7"></use>
                                         </svg>
                                         <span class="project__link-text">awatera.com</span>
@@ -187,9 +186,10 @@
                     <div class="container">
                         <article class="fx about__inner">
                             <div class="fx fx-col about__media">
-                                <div class="about__media-img">
-                                    <img src="images/about/me.jpg" alt="" class="about__media-img">
-                                </div>
+                                <figure class="about__media-img">
+                                    <img src="images/about/me.jpg" width="400" height="500" alt="Денис Курочкин, фото">
+                                </figure>
+                                <p class="h2 about__media-title" aria-hidden="true" data-content="Денис Курочкин">Денис Курочкин</p>
                                 <div class="about__media-cta">
                                     <a href="#section-contacts" class="btn js-anchor-link">Связаться со мной</a>
                                 </div>
@@ -197,12 +197,14 @@
                             <div class="about__content">
                                 <h2 class="about__title">Денис Курочкин</h2>
                                 <p class="about__text">
-                                    Верстальщик, frontend-разработчик и веб-разработчик с более чем 3-х летним опытом работы. Специализируюсь на верстке и разработке веб-интерфейсов, и не прекращаю совершенствоваться в выбранной сфере. Хорошо знаю
-                                    английский. На бирже фриланса Kwork имею 50+ положительных
+                                    Верстальщик, frontend-разработчик и веб-разработчик с более чем <span class="text-no-wrap">3-х</span> летним опытом работы. Специализируюсь на верстке и разработке веб-интерфейсов, и не прекращаю совершенствоваться
+                                    в выбранной сфере. Хорошо знаю
+                                    английский. На бирже фриланса Kwork имею более 50 положительных
                                     <a href="https://kwork.ru/user/kurochkin" target="_blank" rel="noopener noreferrer">отзывов</a>.
                                 </p>
                                 <p class="about__text">Изучаю JavaScript и React. Хочу заниматься тем, что позволит мне совершенствоваться в данных технологиях и выкладываться на полную.</p>
-                                <p class="about__text">Проживаю в Краснодаре, имею желание переехать в <br>Санкт-Петербург.</p>
+                                <p class="about__text">Проживаю в Краснодаре, следующая цель — <span class="text-no-wrap">Санкт-Петербург</span>.</p>
+                                <p class="about__text">Вы можете скачать мое резюме в формате PDF по <a href="">ссылке</a>.</p>
                             </div>
                         </article>
                     </div>
@@ -243,44 +245,36 @@
                     </div>
                 </section>
 
-                <section class="services" id="anchor-services">
-                    <div class="container">
-                        <h2 class="services__title">Услуги</h2>
-                    </div>
-                </section>
-
                 <section class="contacts" id="anchor-contacts">
                     <div class="container">
                         <div class="contacts__inner">
-                            <!-- OK, lets create something great -->
                             <h2 class="contacts__title">Свяжитесь со мной</h2>
-                            <!-- If you like my work and have some cool project to work on, just send me direct message or contact me through social sites listed below -->
                             <p class="contacts__text">по электронной почте с помощью кнопки ниже</p>
-                            <a href="" class="btn-email contacts__btn-email">
+                            <a href="mailto:dennis.kurochkin@gmail.com" class="btn-email contacts__btn-email">
                                 Отправить мне E-mail
-                                <svg class="icon-svg">
+                                <svg class="icon-svg" aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#5"></use>
                                 </svg>
                             </a>
                             <h3 class="contacts__subtitle">или...</h3>
                             <div class="fx fx-jcc contacts__social">
-                                <a href="" class="contacts__social-elem">
-                                    <svg class="icon-svg">
+                                <a href="#" class="contacts__social-elem" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#2"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="contacts__social-elem">
-                                    <svg class="icon-svg">
+                                <a href="#" class="contacts__social-elem" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#6"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="contacts__social-elem">
-                                    <svg class="icon-svg">
+                                <a href="#" class="contacts__social-elem" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#3"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="contacts__social-elem">
-                                    <svg class="icon-svg">
+                                <a href="#" class="contacts__social-elem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <svg class="icon-svg" aria-hidden="true">
                                         <use xlink:href="images/sprite.svg#4"></use>
                                     </svg>
                                 </a>

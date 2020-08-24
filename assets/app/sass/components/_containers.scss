@@ -8,6 +8,14 @@
         @include tablet-lg {
             padding: 0 20px;
         }
+
+        @include tablet-sm {
+            padding: 0 15px;
+        }
+
+        @include phone-sm {
+            padding: 0 10px;
+        }
     }
 }
 

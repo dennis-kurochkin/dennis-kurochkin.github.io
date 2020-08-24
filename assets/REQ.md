@@ -60,3 +60,4 @@
 - Витязь - http://pmkpro.ru/ - https://gitlab.a7a.ru/a7a/vitaz
 - Ростестстандарт - https://rosteststandart.ru/krasnodar-files/prices.html
 - Своя Позиция - https://www.xn--b1akda1aagn5c3eg.xn--p1ai/
+- Ti-Zr - http://ti-zr.ru/

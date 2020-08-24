@@ -24,8 +24,9 @@ $font-size-large: 18px;
 
 $color-accent: #000;
 $color-pink: #C6426E;
-$color-pink-light: lighten(#C6426E, 10%);
+$color-pink-light: lighten($color-pink, 10%);
 $color-purple: #642B73;
+$color-purple-light: lighten($color-purple, 10%);
 $color-white: #fff;
 $color-black: #000000;
 $color-gray: #666666;

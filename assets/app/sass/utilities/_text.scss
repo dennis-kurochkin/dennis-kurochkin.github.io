@@ -9,3 +9,7 @@
 .text-gradient-revert {
   @include text-gradient($gradient-accent-revert);
 }
+
+.text-no-wrap {
+  white-space: nowrap;
+}

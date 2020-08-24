@@ -1,9 +1,15 @@
 .footer {
     position: relative;
-    @include section-padding-sm();
+    padding: 40px 0;
     color: $color-white;
     background: $color-black;
     overflow: hidden;
+
+    @include media {
+        @include laptop {
+            padding: 35px 0 40px;
+        }
+    }
 
     &::before {
         content: '';
@@ -16,11 +22,25 @@
 
     &__inner {
         margin: 0 0 30px;
-    }
 
-    &__credits,
-    &__social {
-        width: 20%;
+        @include media {
+            @include desktop {
+                margin: 0 0 25px;
+                padding: 0 20px;
+            }
+
+            @include laptop {
+                padding: 0 10px;
+            }
+
+            @include tablet-lg {
+                flex-direction: column;
+            }
+
+            @include tablet-sm {
+                margin: 0 0 20px;
+            }
+        }
     }
 
     &__credits {
@@ -37,13 +57,25 @@
 
             &:hover,
             &:focus {
-                @include text-gradient($gradient-accent);
+                text-decoration: none;
+                color: $color-white;
+                border-bottom: 1px solid $color-white;
             }
         }
     }
 
     &__nav {
-        @include list-reset();
+        @include list-reset;
+
+        @include media {
+            @include tablet-lg {
+                margin: 20px 0 25px;
+            }
+
+            @include tablet-sm {
+                margin: 15px 0 20px;
+            }
+        }
 
         &-li {
             margin: -10px 0;
@@ -54,9 +86,17 @@
             padding: 10px 20px;
             color: $color-white;
 
+            @include media {
+                @include laptop {
+                    padding: 10px 15px;
+                    font-size: 14px;
+                }
+            }
+
             &:hover,
             &:focus {
-                @include text-gradient($gradient-accent);
+                color: $color-white;
+                text-decoration-color: $color-white;
             }
 
             &:focus {
@@ -66,9 +106,16 @@
     }
 
     &__created {
-        max-width: 50%;
+        width: 600px;
+        max-width: 90%;
         margin: 0 auto;
         font-size: 14px;
         color: $color-gray;
+
+        @include media {
+            @include laptop {
+                font-size: 12px;
+            }
+        }
     }
 }

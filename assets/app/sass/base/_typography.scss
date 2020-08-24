@@ -65,6 +65,36 @@ h6,
 h1,
 .h1 {
     font-size: 52px;
+
+    @include media {
+        @include desktop {
+            font-size: 48px;
+        }
+
+        @include laptop {
+            font-size: 44px;
+        }
+
+        @include tablet-lg {
+            font-size: 36px;
+        }
+
+        @include tablet-md {
+            font-size: 34px;
+        }
+
+        @include phablet {
+            font-size: 32px;
+        }
+
+        @include phone-md {
+            font-size: 30px;
+        }
+
+        @include phone-sm {
+            font-size: 28px;
+        }
+    }
 }
 
 h2,
@@ -104,23 +134,23 @@ h3,
 
     @include media {
         @include desktop {
-            font-size: 30px;
-        }
-
-        @include laptop {
             font-size: 28px;
         }
 
-        @include tablet-lg {
+        @include laptop {
             font-size: 26px;
         }
 
-        @include phone-lg {
+        @include tablet-lg {
             font-size: 24px;
         }
 
-        @include phone-sm {
+        @include phone-lg {
             font-size: 22px;
+        }
+
+        @include phone-sm {
+            font-size: 20px;
         }
     }
 }
