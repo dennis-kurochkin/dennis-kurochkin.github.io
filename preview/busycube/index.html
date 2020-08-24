@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>BusyCube - Главная</title>
+
+    <meta name="theme-color" content="#94cb00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#94cb00">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body data-sprite="images/sprite.svg">
+
+    <!-- BEGIN layout -->
+    <div class="layout">
+
+        <!-- BEGIN layout__top -->
+        <div class="layout__top">
+
+            <!-- BEGIN header -->
+            <header class="header">
+                <div class="container">
+                    <div class="fx fx-jcsb fx-aic header__inner">
+                        <a href="" class="header__logo" title="Перейти на главную страницу">
+                            <img src="images/logo.png" width="250" height="79" alt="BusyCube">
+                        </a>
+                        <nav class="header__nav">
+                            <ul class="fx header__nav-list">
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Почему Бизикуб</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Каталог</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Собрать кубик</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Как заказать</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="" class="header__cart cart-icon" title="Корзина">
+                            <img src="images/icons-svg/18.svg" width="42" height="30" alt="Корзина" class="cart-icon__icon" aria-hidden="true">
+                            <span class="cart-icon__quantity">1</span>
+                        </a>
+                        <div class="fx fx-col fx-aifs contacts header__contacts">
+                            <a href="tel:+74956417747" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#5"></use>
+                                </svg>
+                                +7 (495) 641-77-47
+                            </a>
+                            <a href="mailto:busycube@yandex.ru" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#6"></use>
+                                </svg>
+                                busycube@yandex.ru
+                            </a>
+                        </div>
+                        <div class="fx socials header__socials">
+                            <a href="#" class="socials__link" title="Facebook">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#2"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" title="Instagram">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#3"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" title="ВКонтакте">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#4"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <button type="button" class="header__mobile-nav-toggle js-mobile-nav-toggle" aria-hidden="true">
+                            <svg class="icon-svg">
+                                <use xlink:href="images/sprite.svg#7"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <!-- END header -->
+
+            <!-- BEGIN mobile navigation -->
+            <div class="mobile-nav js-mobile-nav" aria-hidden="true">
+                <div class="mobile-nav__wrapper js-mobile-nav-wrapper"></div>
+                <div class="mobile-nav__inner">
+                    <div class="fx fx-aic fx-jcsb mobile-nav__top">
+                        <a href="#" class="mobile-nav__logo" tabindex="-1">
+                            <img src="images/logo.png" width="175" height="55" alt="Бизикуб">
+                        </a>
+                        <button type="button" class="mobile-nav__close-btn js-mobile-nav-close" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#8"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-nav__nav">
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Почему Бизикуб</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Каталог</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Собрать кубик</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Как заказать</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="contacts mobile-nav__contacts">
+                        <a href="tel:+74956417747" class="contacts__contact" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#5"></use>
+                            </svg>
+                            +7 (495) 641-77-47
+                        </a>
+                        <a href="mailto:busycube@yandex.ru" class="contacts__contact" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#6"></use>
+                            </svg>
+                            busycube@yandex.ru
+                        </a>
+                    </div>
+                    <div class="fx socials mobile-nav__socials">
+                        <a href="#" class="socials__link" title="Facebook" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#2"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__link" title="Instagram" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#3"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__link" title="ВКонтакте" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#4"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- END mobile navigation -->
+
+            <!-- BEGIN main -->
+            <main class="main">
+
+                <!-- BEGIN hero -->
+                <section class="section hero">
+                    <div class="container">
+                        <div class="hero__inner">
+                            <h1 class="hero__title">
+                                <span class="color-orange-light">Б</span><span class="color-pink">и</span><span class="color-blue">з</span><span class="color-accent">и</span><span class="color-yellow">к</span><span class="color-purple">у</span><span class="color-orange">б</span>
+                            </h1>
+                            <p class="hero__description">
+                                делает ловкими непослушные пальчики, а вместе<br>
+                                с ними развивает речь и интеллект
+                            </p>
+                            <p class="hero__cta">Закажите звонок и оформите бизикуб с доставкой на дом</p>
+                            <a href="#" class="btn js-open-popup-link hero__cta-btn">Оформить заказ</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- END hero -->
+
+                <!-- BEGIN catalog-preview -->
+                <section class="section catalog-preview">
+                    <div class="container">
+                        <h2 class="section__title catalog-preview__title">Каталог</h2>
+                        <div class="catalog-preview__inner">
+                            <a href="#" class="catalog-preview__card">
+                                <span class="h3 catalog-preview__card-title catalog-preview__card-title--yellow">Бизиборды</span>
+                                <img src="images/catalog-preview/1.jpg" class="catalog-preview__card-img" alt="" aria-hidden="true">
+                            </a>
+                            <a href="#" class="catalog-preview__card">
+                                <span class="h3 catalog-preview__card-title catalog-preview__card-title--blue">Бизикубы</span>
+                                <img src="images/catalog-preview/2.jpg" class="catalog-preview__card-img" alt="" aria-hidden="true">
+                            </a>
+                            <a href="#" class="catalog-preview__card">
+                                <span class="h3 catalog-preview__card-title catalog-preview__card-title--pink">Азбуки</span>
+                                <img src="images/catalog-preview/3.jpg" class="catalog-preview__card-img" alt="" aria-hidden="true">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- END catalog-preview -->
+
+                <!-- BEGIN about -->
+                <section class="section about">
+                    <div class="container">
+                        <div class="fx fx-aic about__inner">
+                            <div class="about__content">
+                                <h2 class="about__title">О нас</h2>
+                                <h3 class="about__subtitle">
+                                    Мы тоже заботливые родители, поэтому все, что мы делаем для детей, мы делаем с любовью
+                                </h3>
+                                <p class="about__text">
+                                    ООО «Бизикуб» – динамично развивающаяся компания с ежемесячным производством свыше 200 кубов.<br>
+                                    Мы профессионалы-идеалисты, поэтому продолжаем совершенствовать наш Бизикуб, учитывая интересы детишек и пожелания родителей.
+                                </p>
+                                <div class="fx fx-aifs about__cert">
+                                    <img src="images/about/cert.png" width="88" height="122" alt="" class="about__cert-icon" aria-hidden="true">
+                                    <div class="about__cert-content">
+                                        <p class="about__cert-title">Сертификат соответствия</p>
+                                        <a href="#" class="about__cert-link">Проверить подлинность</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__media" aria-hidden="true">
+                                <img src="images/about/img.jpg" width="580" height="490" alt="" class="about__img">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END about -->
+
+                <!-- BEGIN about-video -->
+                <section class="section about-video">
+                    <div class="container">
+                        <div class="fx fx-aifs about-video__inner">
+                            <div class="about-video__video">
+                                <lite-youtube videoid="-0uQmy_096c"></lite-youtube>
+                            </div>
+                            <div class="fx fx-jcc about-video__content">
+                                <h3 class="about-video__title">Посмотрите, как мы<br> производим наши кубики</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END about-video -->
+
+                <!-- BEGIN why -->
+                <section class="section why">
+                    <div class="container">
+                        <h2 class="section__title why__title">Почему <span class="color-accent-light">кубики</span> заказывают у нас?</h2>
+                        <div class="why__wrapper">
+                            <div class="fx fx-aic why__inner">
+                                <ul class="why__list">
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-1.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Игрушка сертифицирована</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-2.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Эко-материалы, абсолютно безопасные для малышей</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-3.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Собран и проверен вручную</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-4.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Идеально гладкие поверхности и закругленные уголки</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-5.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Бизикуб– это 5 бизибордов и 16 игрушек</span>
+                                    </li>
+                                </ul>
+                                <div class="why__media" aria-hidden="true">
+                                    <img src="images/why/img-1.jpg" width="545" height="513" alt="">
+                                </div>
+                            </div>
+                            <div class="fx fx-aic fx-row-reverse why__inner why__inner--reverse">
+                                <ul class="why__list">
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-6.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Именная модель для вашего крохи</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-7.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Изготавливаем за 1–2 дня</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-8.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Всегда на связи</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-9.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Получаете гарантию 14 дней</span>
+                                    </li>
+                                    <li class="why__list-item">
+                                        <span class="why__list-icon" aria-hidden="true">
+                                            <img src="images/why/icon-10.svg" width="60" height="60" alt="">
+                                        </span>
+                                        <span class="why__list-text">Послегарантийное обслуживание Busycube Service</span>
+                                    </li>
+                                </ul>
+                                <div class="why__media" aria-hidden="true">
+                                    <img src="images/why/img-2.jpg" width="545" height="513" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END why -->
+
+                <!-- BEGIN cta -->
+                <section class="section cta">
+                    <div class="container cta__container">
+                        <img src="images/cta/sale-badge.png" width="203" height="171" alt="" class="cta__sale-badge" aria-hidden="true">
+                        <h2 class="h1 cta__title">Скидка 10% на второй кубик</h2>
+                        <p class="cta__text">При покупке 2 бизикубов второй со скидкой!</p>
+                        <a href="#" class="btn btn--blue">Оформить заказ</a>
+                    </div>
+                </section>
+                <!-- END cta -->
+
+                <!-- BEGIN build-one -->
+                <section class="section build-one">
+                    <div class="container">
+                        <div class="fx fx-col fx-center text-center build-one__inner">
+                            <h2 class="section__title build-one__title">Соберите свой <span class="color-accent-light">Бизикуб</span></h2>
+                            <p class="build-one__subtitle">Кубик может быть именным!</p>
+                            <img src="images/build-one/cubes.jpg" width="841" height="504" alt="Кубики" class="build-one__img">
+                            <a href="" class="btn btn--accent-light">Собрать бизикуб</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- END build-one -->
+
+                <!-- BEGIN product-slider -->
+                <section class="section product-slider">
+                    <div class="container">
+                        <h2 class="h3 product-slider__title">
+                            Верхняя панель-сортер для вашего <span class="color-accent-light">кубика</span><br>
+                            может быть такой:
+                        </h2>
+                        <div class="product-slider__slider js-product-slider">
+                            <article class="product-card product-card--title-only product-slider__product-card">
+                                <a href="images/catalog/sample-1.jpg" class="product-card__media js-open-image-link">
+                                    <img src="images/catalog/sample-1.jpg" alt="Бизикуб" class="product-card__img">
+                                </a>
+                                <h3 class="product-card__title">Животные + Геометрические фигуры</h3>
+                                <a href="" class="btn btn--md product-card__btn-cart">В корзину</a>
+                            </article>
+                            <article class="product-card product-card--title-only product-slider__product-card">
+                                <a href="images/catalog/sample-1.jpg" class="product-card__media js-open-image-link">
+                                    <img src="images/catalog/sample-1.jpg" alt="Бизикуб" class="product-card__img">
+                                </a>
+                                <h3 class="product-card__title">Животные + Геометрические фигуры</h3>
+                                <a href="" class="btn btn--md product-card__btn-cart">В корзину</a>
+                            </article>
+                            <article class="product-card product-card--title-only product-slider__product-card">
+                                <a href="images/catalog/sample-1.jpg" class="product-card__media js-open-image-link">
+                                    <img src="images/catalog/sample-1.jpg" alt="Бизикуб" class="product-card__img">
+                                </a>
+                                <h3 class="product-card__title">Животные + Геометрические фигуры</h3>
+                                <a href="" class="btn btn--md product-card__btn-cart">В корзину</a>
+                            </article>
+                            <article class="product-card product-card--title-only product-slider__product-card">
+                                <a href="images/catalog/sample-1.jpg" class="product-card__media js-open-image-link">
+                                    <img src="images/catalog/sample-1.jpg" alt="Бизикуб" class="product-card__img">
+                                </a>
+                                <h3 class="product-card__title">Животные + Геометрические фигуры</h3>
+                                <a href="" class="btn btn--md product-card__btn-cart">В корзину</a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <!-- END product-slider -->
+
+                <!-- BEGIN choosing-us -->
+                <section class="section choosing-us">
+                    <div class="container">
+                        <h2 class="section__title choosing-us__title">Нас выбирают звезды</h2>
+                        <div class="choosing-us__slider js-choosing-us-slider">
+                            <div class="choosing-us__slide">
+                                <a href="images/choosing-us/1.png" class="choosing-us__slide-link js-open-image-link" title="Просмотр отзыва звезды">
+                                    <img src="images/choosing-us/1.png" alt="" class="choosing-us__slide-img">
+                                </a>
+                            </div>
+                            <div class="choosing-us__slide">
+                                <a href="images/choosing-us/2.png" class="choosing-us__slide-link js-open-image-link" title="Просмотр отзыва звезды">
+                                    <img src="images/choosing-us/2.png" alt="" class="choosing-us__slide-img">
+                                </a>
+                            </div>
+                            <div class="choosing-us__slide">
+                                <a href="images/choosing-us/3.png" class="choosing-us__slide-link js-open-image-link" title="Просмотр отзыва звезды">
+                                    <img src="images/choosing-us/3.png" alt="" class="choosing-us__slide-img">
+                                </a>
+                            </div>
+                            <div class="choosing-us__slide">
+                                <a href="images/choosing-us/4.png" class="choosing-us__slide-link js-open-image-link" title="Просмотр отзыва звезды">
+                                    <img src="images/choosing-us/4.png" alt="" class="choosing-us__slide-img">
+                                </a>
+                            </div>
+                            <div class="choosing-us__slide">
+                                <a href="images/choosing-us/5.png" class="choosing-us__slide-link js-open-image-link" title="Просмотр отзыва звезды">
+                                    <img src="images/choosing-us/5.png" alt="" class="choosing-us__slide-img">
+                                </a>
+                            </div>
+                            <div class="choosing-us__slide">
+                                <a href="images/choosing-us/6.png" class="choosing-us__slide-link js-open-image-link" title="Просмотр отзыва звезды">
+                                    <img src="images/choosing-us/6.png" alt="" class="choosing-us__slide-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END choosing-us -->
+
+                <!-- BEGIN reviews -->
+                <section class="section section--last reviews">
+                    <div class="container">
+                        <h2 class="section__title reviews__title">Отзывы</h2>
+                        <div class="reviews__slider js-reviews-slider">
+                            <div class="reviews__slide">
+                                <a href="images/reviews/1.png" class="reviews__slide-link js-open-image-link" title="Просмотр отзыва">
+                                    <img src="images/reviews/1.png" alt="" class="reviews__slide-img">
+                                </a>
+                            </div>
+                            <div class="reviews__slide">
+                                <a href="images/reviews/2.png" class="reviews__slide-link js-open-image-link" title="Просмотр отзыва">
+                                    <img src="images/reviews/2.png" alt="" class="reviews__slide-img">
+                                </a>
+                            </div>
+                            <div class="reviews__slide">
+                                <a href="images/reviews/3.png" class="reviews__slide-link js-open-image-link" title="Просмотр отзыва">
+                                    <img src="images/reviews/3.png" alt="" class="reviews__slide-img">
+                                </a>
+                            </div>
+                            <div class="reviews__slide">
+                                <a href="images/reviews/4.png" class="reviews__slide-link js-open-image-link" title="Просмотр отзыва">
+                                    <img src="images/reviews/4.png" alt="" class="reviews__slide-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END reviews -->
+
+            </main>
+            <!-- END main -->
+
+        </div>
+        <!-- END layout__top -->
+
+        <!-- BEGIN layout__bottom -->
+        <div class="layout__bottom">
+
+            <!-- BEGIN footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="fx fx-jcsb fx-aifs footer__inner">
+                        <a href="#" class="footer__logo" title="Перейти на главную страницу">
+                            <img src="images/logo.png" width="250" height="79" alt="Бизикуб">
+                        </a>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Почему Бизикуб</a>
+                            </li>
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Каталог</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Собрать кубик</a>
+                            </li>
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Как заказать</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="fx fx-col fx-aifs contacts footer__contacts">
+                            <a href="tel:+74956417747" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#5"></use>
+                                </svg>
+                                +7 (495) 641-77-47
+                            </a>
+                            <a href="mailto:busycube@yandex.ru" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#6"></use>
+                                </svg>
+                                busycube@yandex.ru
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center footer__copyright">
+                        &copy; Все права защищены 2020
+                    </p>
+                </div>
+            </footer>
+            <!-- END footer -->
+
+        </div>
+        <!-- END layout__bottom -->
+
+    </div>
+    <!-- END layout -->
+
+    <!-- START popups -->
+    <div class="hide">
+
+        <div class="cmn-popup cmn-popup--consult" id="popup-consult">
+            <div class="cmn-popup__inner">
+                <h3 class="cmn-popup__title">Обратный звонок</h3>
+                <p class="cmn-popup__subtitle">
+                    Заполните форму<br>
+                    и закажите обратный звонок
+                </p>
+                <form class="form cmn-popup__form">
+                    <div class="form__row">
+                        <div class="form__input">
+                            <input type="text" class="form__input-input" placeholder="Ваше имя" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <input type="text" class="form__input-input" placeholder="Ваш телефон" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <button type="submit" class="btn form__btn">Заказать звонок</button>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__agree">
+                            <input type="checkbox" class="form__agree-checkbox" id="form-agree-1" checked hidden>
+                            <label for="form-agree-1" class="form__agree-label">
+                                <span class="form__agree-icon">
+
+                                </span>
+                                <span class="form__agree-text">
+                                    Вы соглашаетесь с <a href="#">политикой конфиденциальности</a> и условиями
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cmn-popup cmn-popup--success" id="popup-success">
+            <div class="cmn-popup__inner">
+                <div class="cmn-popup__success-img">
+                    <svg class="icon-svg">
+                        <use xlink:href="images/sprite.svg#1"></use>
+                    </svg>
+                </div>
+                <h3 class="cmn-popup__title">Заявка отправлена!</h3>
+                <p class="cmn-popup__subtitle">
+                    Наши менеджеры скоро вам перезвонят
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- END popups -->
+
+    <script src="js/all.min.js"></script>
+
+</body>
+
+</html>

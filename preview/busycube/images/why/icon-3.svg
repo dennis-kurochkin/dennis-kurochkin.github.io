@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="128px" height="128px" viewBox="0 0 128 128" xml:space="preserve" class="js-svg js-svg-replaced">
+	<rect x="1.92" y="1.92" width="124.16" height="124.16" style="stroke: rgb(226, 250, 177); fill: none; stroke-alignment: inside; stroke-width: 3.84" rx="62.08" ry="62.08"></rect>
+
+	<g transform="scale(0.6) translate(42.66666666666667, 42.66666666666667)">
+		<path fill="#e2fab1" d="M106.457,99.413L66.16,50.134c4.408-8.395,3.669-18.966-2.714-26.767c-6.283-7.679-16.279-10.521-25.27-8.071 l7.561,9.239L42.17,35.466l-11.78,1.627l-7.561-9.238c-4.18,8.328-3.371,18.688,2.912,26.367 c6.389,7.807,16.616,10.623,25.725,7.949l40.285,49.268c2.021,2.473,5.666,2.838,8.139,0.816l5.75-4.704 C108.112,105.529,108.478,101.886,106.457,99.413z"></path>
+	</g>
+</svg>

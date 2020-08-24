@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>BusyCube - Каталог</title>
+
+    <meta name="theme-color" content="#94cb00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#94cb00">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body data-sprite="images/sprite.svg">
+
+    <!-- BEGIN layout -->
+    <div class="layout">
+
+        <!-- BEGIN layout__top -->
+        <div class="layout__top">
+
+            <!-- BEGIN header -->
+            <header class="header">
+                <div class="container">
+                    <div class="fx fx-jcsb fx-aic header__inner">
+                        <a href="" class="header__logo" title="Перейти на главную страницу">
+                            <img src="images/logo.png" width="250" height="79" alt="BusyCube">
+                        </a>
+                        <nav class="header__nav">
+                            <ul class="fx header__nav-list">
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Почему Бизикуб</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Каталог</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Собрать кубик</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Как заказать</a>
+                                </li>
+                                <li class="header__nav-li">
+                                    <a href="#" class="header__nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="" class="header__cart cart-icon" title="Корзина">
+                            <img src="images/icons-svg/18.svg" width="42" height="30" alt="Корзина" class="cart-icon__icon" aria-hidden="true">
+                            <span class="cart-icon__quantity">1</span>
+                        </a>
+                        <div class="fx fx-col fx-aifs contacts header__contacts">
+                            <a href="tel:+74956417747" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#5"></use>
+                                </svg>
+                                +7 (495) 641-77-47
+                            </a>
+                            <a href="mailto:busycube@yandex.ru" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#6"></use>
+                                </svg>
+                                busycube@yandex.ru
+                            </a>
+                        </div>
+                        <div class="fx socials header__socials">
+                            <a href="#" class="socials__link" title="Facebook">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#2"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" title="Instagram">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#3"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" title="ВКонтакте">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#4"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <button type="button" class="header__mobile-nav-toggle js-mobile-nav-toggle" aria-hidden="true">
+                            <svg class="icon-svg">
+                                <use xlink:href="images/sprite.svg#7"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <!-- END header -->
+
+            <!-- BEGIN mobile navigation -->
+            <div class="mobile-nav js-mobile-nav" aria-hidden="true">
+                <div class="mobile-nav__wrapper js-mobile-nav-wrapper"></div>
+                <div class="mobile-nav__inner">
+                    <div class="fx fx-aic fx-jcsb mobile-nav__top">
+                        <a href="#" class="mobile-nav__logo" tabindex="-1">
+                            <img src="images/logo.png" width="175" height="55" alt="Бизикуб">
+                        </a>
+                        <button type="button" class="mobile-nav__close-btn js-mobile-nav-close" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#8"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-nav__nav">
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Почему Бизикуб</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Каталог</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Собрать кубик</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Как заказать</a>
+                        </li>
+                        <li class="mobile-nav__nav-li">
+                            <a href="#" class="mobile-nav__nav-link" tabindex="-1">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="contacts mobile-nav__contacts">
+                        <a href="tel:+74956417747" class="contacts__contact" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#5"></use>
+                            </svg>
+                            +7 (495) 641-77-47
+                        </a>
+                        <a href="mailto:busycube@yandex.ru" class="contacts__contact" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#6"></use>
+                            </svg>
+                            busycube@yandex.ru
+                        </a>
+                    </div>
+                    <div class="fx socials mobile-nav__socials">
+                        <a href="#" class="socials__link" title="Facebook" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#2"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__link" title="Instagram" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#3"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__link" title="ВКонтакте" tabindex="-1">
+                            <svg class="icon-svg" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#4"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- END mobile navigation -->
+
+            <!-- BEGIN main -->
+            <main class="main">
+
+                <!-- BEGIN breadcrumbs -->
+                <section class="section section--first breadcrumbs">
+                    <div class="container">
+                        <ul class="fx breadcrumbs__list">
+                            <li class="breadcrumbs__list-li">
+                                <a href="" class="breadcrumbs__list-link">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__list-li">
+                                <a href="" class="breadcrumbs__list-link">Каталог</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- END breadcrumbs -->
+
+                <!-- BEGIN catalog -->
+                <section class="section catalog">
+                    <div class="container">
+                        <div class="fx fx-aifs catalog__inner">
+                            <aside class="catalog__aside catalog-sidebar">
+                                <h1 class="h2 catalog-sidebar__title">Каталог</h1>
+                                <select name="" id="" class="form__select catalog-sidebar__sort-select">
+                                    <option value="" selected>По популярности</option>
+                                    <option value="">По цене: по убыванию</option>
+                                    <option value="">По цене: по возрастанию</option>
+                                </select>
+                                <div class="catalog-sidebar__filters">
+                                    <div class="catalog-filter catalog-filter--has-options catalog-sidebar__filter">
+                                        <a href="catalog.html" class="catalog-filter__title">
+                                            <span class="catalog-filter__title-marker" aria-hidden="true"></span>
+                                            <span class="catalog-filter__title-text">Бизикубы</span>
+                                        </a>
+                                        <div class="catalog-filter__options">
+                                            <a href="" class="catalog-filter__option active">
+                                                <span class="catalog-filter__option-marker" aria-hidden="true"></span>
+                                                кубик с розеткой
+                                            </a>
+                                            <a href="" class="catalog-filter__option">
+                                                <span class="catalog-filter__option-marker" aria-hidden="true"></span>
+                                                кубик с телефоном
+                                            </a>
+                                            <a href="" class="catalog-filter__option">
+                                                <span class="catalog-filter__option-marker" aria-hidden="true"></span>
+                                                кубик с телефоном и розеткой
+                                            </a>
+                                            <a href="" class="catalog-filter__option">
+                                                <span class="catalog-filter__option-marker" aria-hidden="true"></span>
+                                                маленькие кубы 22 см
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-filter active catalog-sidebar__filter">
+                                        <a href="catalog_busyboards.html" class="catalog-filter__title">
+                                            <span class="catalog-filter__title-marker" aria-hidden="true"></span>
+                                            <span class="catalog-filter__title-text">Бизиборды</span>
+                                        </a>
+                                        <div class="catalog-filter__variants">
+                                            <a href="" class="catalog-filter__variant active">
+                                                со светом
+                                            </a>
+                                            <a href="" class="catalog-filter__variant">
+                                                без света
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-filter catalog-sidebar__filter">
+                                        <a href="" class="catalog-filter__title">
+                                            <span class="catalog-filter__title-marker" aria-hidden="true"></span>
+                                            <span class="catalog-filter__title-text">Азбуки</span>
+                                        </a>
+                                        <div class="catalog-filter__variants">
+                                            <a href="" class="catalog-filter__variant active">
+                                                VIP-азбука в кейсе
+                                            </a>
+                                            <a href="" class="catalog-filter__variant">
+                                                Азбука рус. без цифр
+                                            </a>
+                                            <a href="" class="catalog-filter__variant">
+                                                Азбука англ. без цифр
+                                            </a>
+                                            <a href="" class="catalog-filter__variant">
+                                                Азбука рус. с цифрами
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            <div class="catalog__main catalog__main--no-products">
+                                <h2 class="h3 catalog__no-products-title">В этой категории пока нет товаров</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END catalog -->
+
+                <!-- BEGIN cta -->
+                <section class="section cta">
+                    <div class="container cta__container">
+                        <img src="images/cta/sale-badge.png" width="203" height="171" alt="" class="cta__sale-badge" aria-hidden="true">
+                        <h2 class="h1 cta__title">Скидка 10% на второй кубик</h2>
+                        <p class="cta__text">При покупке 2 бизикубов второй со скидкой!</p>
+                        <a href="#" class="btn btn--blue">Оформить заказ</a>
+                    </div>
+                </section>
+                <!-- END cta -->
+
+            </main>
+            <!-- END main -->
+
+        </div>
+        <!-- END layout__top -->
+
+        <!-- BEGIN layout__bottom -->
+        <div class="layout__bottom">
+
+            <!-- BEGIN footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="fx fx-jcsb fx-aifs footer__inner">
+                        <a href="#" class="footer__logo" title="Перейти на главную страницу">
+                            <img src="images/logo.png" width="250" height="79" alt="Бизикуб">
+                        </a>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Почему Бизикуб</a>
+                            </li>
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Каталог</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Собрать кубик</a>
+                            </li>
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Как заказать</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__menu">
+                            <li class="footer__menu-li">
+                                <a href="#" class="footer__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="fx fx-col fx-aifs contacts footer__contacts">
+                            <a href="tel:+74956417747" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#5"></use>
+                                </svg>
+                                +7 (495) 641-77-47
+                            </a>
+                            <a href="mailto:busycube@yandex.ru" class="contacts__contact">
+                                <svg class="icon-svg" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#6"></use>
+                                </svg>
+                                busycube@yandex.ru
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center footer__copyright">
+                        &copy; Все права защищены 2020
+                    </p>
+                </div>
+            </footer>
+            <!-- END footer -->
+
+        </div>
+        <!-- END layout__bottom -->
+
+    </div>
+    <!-- END layout -->
+
+    <!-- START popups -->
+    <div class="hide">
+
+        <div class="cmn-popup cmn-popup--consult" id="popup-consult">
+            <div class="cmn-popup__inner">
+                <h3 class="cmn-popup__title">Обратный звонок</h3>
+                <p class="cmn-popup__subtitle">
+                    Заполните форму<br>
+                    и закажите обратный звонок
+                </p>
+                <form class="form cmn-popup__form">
+                    <div class="form__row">
+                        <div class="form__input">
+                            <input type="text" class="form__input-input" placeholder="Ваше имя" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <input type="text" class="form__input-input" placeholder="Ваш телефон" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <button type="submit" class="btn form__btn">Заказать звонок</button>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__agree">
+                            <input type="checkbox" class="form__agree-checkbox" id="form-agree-1" checked hidden>
+                            <label for="form-agree-1" class="form__agree-label">
+                                <span class="form__agree-icon">
+
+                                </span>
+                                <span class="form__agree-text">
+                                    Вы соглашаетесь с <a href="#">политикой конфиденциальности</a> и условиями
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cmn-popup cmn-popup--success" id="popup-success">
+            <div class="cmn-popup__inner">
+                <div class="cmn-popup__success-img">
+                    <svg class="icon-svg">
+                        <use xlink:href="images/sprite.svg#1"></use>
+                    </svg>
+                </div>
+                <h3 class="cmn-popup__title">Заявка отправлена!</h3>
+                <p class="cmn-popup__subtitle">
+                    Наши менеджеры скоро вам перезвонят
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- END popups -->
+
+    <script src="js/all.min.js"></script>
+
+</body>
+
+</html>
