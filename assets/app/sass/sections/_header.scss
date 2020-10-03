@@ -4,15 +4,6 @@
     background: $color-black;
     overflow: hidden;
 
-    &::before {
-        content: '';
-        @include absolute-x-centering();
-        top: 0;
-        @include box(110%, 100%);
-        box-shadow: inset 0 0 20px rgba($color-gray, .5);
-        pointer-events: none;
-    }
-
     &__inner {
         height: 85px;
 
@@ -34,9 +25,10 @@
         display: flex;
         @include flex-centering;
         flex-shrink: 0;
-        @include box(50px);
+        height: 50px;
         margin: 0 6.5% 0 0;
         padding: 2px 0 0 1px;
+        padding: 0 15px;
         font-size: 18px;
         color: $color-white;
         font-weight: 600;
@@ -80,15 +72,6 @@
             }
         }
 
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     left: 0;
-        //     bottom: 0;
-        //     @include box(10px);
-        //     background: $color-accent;
-        // }
-
         &-decorator {
             width: 100%;
 
@@ -126,6 +109,10 @@
         &-li {
             display: flex;
 
+            &+.header__nav-li {
+                margin-left: 30px;
+            }
+
             &--current {
                 font-weight: 700;
             }
@@ -135,18 +122,13 @@
             position: relative;
             display: flex;
             align-items: center;
-            padding: 0 20px;
             color: $color-white;
             font-size: 16px;
 
-            @include laptop {
-                padding: 0 17px;
-            }
-
             &:hover,
             &:focus {
-                text-decoration: none;
-                color: $color-pink;
+                text-decoration: underline;
+                color: $color-white;
 
                 &::before {
                     bottom: 0;

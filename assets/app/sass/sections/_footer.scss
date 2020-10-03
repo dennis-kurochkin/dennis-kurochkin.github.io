@@ -21,11 +21,8 @@
     }
 
     &__inner {
-        margin: 0 0 30px;
-
         @include media {
             @include desktop {
-                margin: 0 0 25px;
                 padding: 0 20px;
             }
 
@@ -101,20 +98,6 @@
 
             &:focus {
                 outline-offset: -5px;
-            }
-        }
-    }
-
-    &__created {
-        width: 600px;
-        max-width: 90%;
-        margin: 0 auto;
-        font-size: 14px;
-        color: $color-gray;
-
-        @include media {
-            @include laptop {
-                font-size: 12px;
             }
         }
     }

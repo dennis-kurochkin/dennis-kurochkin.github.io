@@ -1,5 +1,4 @@
 .container {
-    width: 1200px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 25px;
@@ -17,23 +16,12 @@
             padding: 0 10px;
         }
     }
-}
 
-.container-fluid {
-    width: 1700px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-
-    @include desktop-ultra {
-        padding: 0 25px;
+    &:not(.container--sm) {
+        width: 1200px;
     }
 
-    @include desktop-wide {
-        padding: 0 20px;
-    }
-
-    @include desktop {
-        padding: 0 15px;
+    &--sm {
+        width: 650px;
     }
 }

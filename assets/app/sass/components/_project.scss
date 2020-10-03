@@ -84,7 +84,7 @@
     }
 
     &__link {
-        margin: 0 0 30px;
+        margin: 0 0 20px;
         color: $color-white;
         font-size: 14px;
 
@@ -123,7 +123,7 @@
     }
 
     &__title {
-        margin: 0 0 20px;
+        margin: 0 0 15px;
 
         @include media {
             @include desktop {
@@ -137,9 +137,9 @@
     }
 
     &__about {
-        margin: 0;
+        margin: 0 0 20px;
         padding-right: 10%;
-        font-size: 20px;
+        font-size: 18px;
 
         @include media {
             @include desktop {
@@ -151,6 +151,10 @@
                 font-size: 16px;
             }
         }
+    }
+
+    &__link-about {
+        margin-left: auto;
     }
 
     &:hover,

@@ -1,81 +1,31 @@
 .skills {
     @include section-padding-lg();
 
-    &__content {
-        width: 50%;
-        margin: 0 5% 0 0;
-    }
-
     &__title {
-        margin: 0 0 30px;
+        margin: 0 0 40px;
     }
 
-    &__section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 20px;
-
-        &+.skills__section {
-            margin-top: 30px;
-        }
-    }
-
-    &__text {
-        margin: 0 0 20px;
-    }
-
-    &__resourse-link {
-        position: relative;
-        display: flex;
-        align-items: center;
-        font-size: 22px;
-        border-bottom: 2px solid transparent;
-        margin: 0 0 0 40px;
-
-        &::before {
-            content: '';
-            @include absolute-y-centering();
-            left: -35px;
-            @include box(20px, 4px);
-            background: #652B73;
-        }
-
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-
-            border-color: rgba($color-gray, .5);
-        }
-
-        &+.skills__resourse-link {
-            margin-top: 15px;
-        }
-    }
-
-    &__skills {
-        width: 45%;
-        padding: 10px 0 0;
-        margin: -30px 0;
+    &__items {
+        @include list-reset;
+        margin: -4px;
     }
 
     &__skill {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 33.33%;
-        margin: 30px 0;
-        font-weight: bold;
+        flex: 1 0 auto;
+        margin: 4px;
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 3px;
+        background: $gradient-accent;
+        color: $color-white;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: default;
 
-        &::before {
-            content: '';
-            display: block;
-            @include box(20px);
-            margin: 0 15px 0 0;
-            background: $gradient-accent-revert;
-            background: $color-purple;
-            // background: #652B73;
-            border-radius: 2px;
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba($color-accent, .2);
         }
     }
 }

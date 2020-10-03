@@ -123,7 +123,7 @@
     }
 
     &:active {
-        opacity: 0.9;
+        filter: opacity(85%);
     }
 
     &:hover {

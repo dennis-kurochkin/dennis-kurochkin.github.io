@@ -1,158 +1,36 @@
 .about {
-    @include section-padding-lg;
+    padding: 70px 0 90px;
 
-    &__inner {
-
-        @include media {
-            @include tablet-lg {
-                align-items: flex-start;
-            }
-
-            @include tablet-lg {
-                flex-direction: column;
-            }
-        }
+    @include desktop-wide {
+        padding: 80px 0;
     }
 
-    &__media {
-        position: relative;
-        width: calc(40% - 60px);
-        margin: 0 40px 0 20px;
-
-        @include media {
-            @include desktop {
-                width: calc(45% - 50px);
-                margin: 0 30px 0 20px;
-            }
-
-            @include laptop {
-                width: calc(45% - 35px);
-                margin: 0 20px 0 15px;
-            }
-
-            @include tablet-lg {
-                @include box(400px, auto);
-                margin: 0 auto 15px;
-                padding: 30px 20px 25px;
-            }
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: calc(50% - 20px);
-            top: calc(50% + 20px);
-            z-index: 1;
-            @include box(100%);
-            background: $gradient-accent;
-            border-radius: 15px;
-
-            @include media {
-                @include laptop {
-                    left: calc(50% - 15px);
-                    top: calc(50% + 15px);
-                }
-
-                @include tablet-lg {
-                    left: 50%;
-                    top: 50%;
-                }
-            }
-        }
-
-        &-title,
-        &-img img,
-        &-cta {
-            position: relative;
-            z-index: 2;
-        }
-
-        &-title {
-            position: relative;
-            display: none;
-            margin: 0 0 20px;
-            text-align: center;
-            color: $color-white;
-
-            @include media {
-                @include tablet-lg {
-                    display: block;
-                }
-            }
-        }
-
-        &-img {
-            height: 100%;
-            margin: 0 0 20px;
-
-            @include media {
-                @include laptop {
-                    margin: 0 0 15px;
-                }
-
-                @include tablet-lg {
-                    @include box(250px);
-                    margin: 0 auto 15px;
-                }
-            }
-
-            img {
-                @include box(100%);
-                object-fit: cover;
-                object-position: center bottom;
-                border-radius: 15px;
-                
-                @include media {
-                    @include tablet-lg {
-                        object-position: center center;
-                        border-radius: 50%;
-                    }
-                }
-            }
-        }
-
-        &-cta {
-            width: 90%;
-
-            @include media {
-                @include tablet-lg {
-                    margin: 0 auto;
-                }
-            }
-
-            .btn {
-                width: 100%;
-                padding: 18px 30px;
-                border-radius: 7px;
-                background: $color-white;
-                color: $color-black;
-                font-weight: 600;
-                box-shadow: inset 0 0 0 3px $color-black;
-
-                &:hover,
-                &:focus {
-                    color: $color-white;
-                    background: $color-black;
-                }
-            }
-        }
+    @include desktop {
+        padding: 70px 0;
     }
 
-    &__content {
-        width: 60%;
+    @include laptop {
+        padding: 60px 0;
+    }
 
-        @include media {
-            @include desktop {
-                width: 55%;
-            }
+    @include tablet-lg {
+        padding: 50px 0;
+    }
 
-            @include tablet-lg {
-                width: 90%;
-                margin: 0 auto;
-                text-align: center;
-            }
-        }
+    @include tablet-md {
+        padding: 45px 0;
+    }
+
+    @include phone-lg {
+        padding: 40px 0;
+    }
+
+    @include phone-md {
+        padding: 35px 0 40px;
+    }
+
+    @include phone-sm {
+        padding: 30px 0 35px;
     }
 
     &__title {
@@ -175,7 +53,7 @@
 
     &__text {
         margin: 0.75em 0;
-        font-size: 22px;
+        font-size: 18px;
 
         @include media {
             @include desktop {
@@ -188,17 +66,23 @@
 
             @include tablet-lg {
                 margin: 0.5em 0;
-                // font-size: 16px;
             }
         }
 
         a {
             color: $color-pink;
-            text-decoration: underline;
+            font-weight: 600;
+
+            &[target="_blank"]::after {
+                content: '';
+                display: inline-block;
+                margin-left: 5px;
+                @include svg-icon('9.svg', 15px, 15px);
+            }
 
             &:hover,
             &:focus {
-                color: $color-purple;
+                text-decoration: underline;
             }
         }
     }
