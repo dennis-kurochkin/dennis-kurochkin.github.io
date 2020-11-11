@@ -13,13 +13,13 @@
     &__skill {
         flex: 1 0 auto;
         margin: 4px;
-        padding: 10px 15px;
+        padding: rem(12px) rem(18px);
         text-align: center;
         border-radius: 3px;
         background: $gradient-accent;
         color: $color-white;
-        font-weight: 600;
-        font-size: 16px;
+        font-weight: 500;
+        font-size: rem(16px);
         cursor: default;
 
         &:hover,

@@ -1,5 +1,5 @@
 @function rem($px) {
-    @return $px / $font-size-base+0rem;
+    @return $px / $font-size-base * 1rem;
 }
 
 @mixin text-gradient($gradient) {
