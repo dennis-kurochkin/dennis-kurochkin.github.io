@@ -1,4 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .creditsText {
   margin: 0;
   font-size: var(--fz-3);
+}
+
+.linksList {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.linksListItem {
+  & + .linksListItem {
+    margin-left: 12px;
+  }
+}
+
+.linksListLink {
+  font-size: var(--fz-2);
 }
