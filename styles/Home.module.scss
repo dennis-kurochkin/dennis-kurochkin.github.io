@@ -1,0 +1,8 @@
+.text {
+  margin: 0;
+  font-size: var(--fz-2);
+
+  & + .text {
+    margin-top: 16px;
+  }
+}

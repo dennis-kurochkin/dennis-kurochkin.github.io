@@ -1,0 +1,7 @@
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  min-height: 100vh;
+  padding: 24px;
+}

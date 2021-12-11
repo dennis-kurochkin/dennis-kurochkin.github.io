@@ -1,3 +1,22 @@
 :root {
+  --color-background: #1F1D36;
+  --color-text: #ffffff;
+  --fz-1: 44px;
+  --fz-2: 20px;
+  --fz-3: 14px;
+}
 
+::selection {
+  background: #E9A6A6;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  line-height: 1.65;
+  background: var(--color-background);
+}
+
+a {
+  color: var(--color-text)
 }
