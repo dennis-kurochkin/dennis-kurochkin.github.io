@@ -1,7 +1,6 @@
-
 import styles from './Footer.module.scss'
-import { FaGithubAlt, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
-import { SiHabr } from 'react-icons/si';
+import { FaGithubAlt, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa'
+import { SiHabr } from 'react-icons/si'
 
 type ContactLink = {
   link: string

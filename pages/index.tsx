@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import styles from '../styles/Home.module.scss'
-import Head from 'next/head';
-import Layout from "../layouts/layout";
+import Head from 'next/head'
+import Layout from '../layouts/layout'
 
 const MyCurrentJobLink = (
   <a
