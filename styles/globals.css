@@ -1,13 +1,24 @@
 :root {
   --color-background: #1F1D36;
+  --color-background-secondary: #3F3351;
   --color-text: #ffffff;
-  --fz-1: 44px;
+  --fz-h1: 48px;
+  --fz-h2: 32px;
   --fz-2: 20px;
   --fz-3: 14px;
 }
 
+@media (max-width: 600px) {
+  :root {
+    --fz-h1: 42px;
+    --fz-h2: 28px;
+    --fz-2: 18px;
+  }
+}
+
 ::selection {
   background: #E9A6A6;
+  color: var(--color-text);
 }
 
 body {

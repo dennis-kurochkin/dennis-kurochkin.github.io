@@ -1,8 +1,33 @@
+@import '../styles/variables';
+
 .text {
   margin: 0;
   font-size: var(--fz-2);
 
   & + .text {
     margin-top: 16px;
+
+    @media (max-width: $bp-sm) {
+      margin-top: 12px;
+    }
   }
+}
+
+.blogPostsTitle {
+  margin: 36px 0 24px;
+  color: #f9b6b6;
+  font-size: var(--fz-h2);
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.blogPostsItem {
+  display: flex;
 }

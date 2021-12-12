@@ -1,12 +1,23 @@
+@import '../styles/variables';
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2em;
+
+  @media (max-width: $bp-sm) {
+    flex-direction: column-reverse;
+  }
 }
 
 .creditsText {
   margin: 0;
   font-size: var(--fz-3);
+
+  @media (max-width: $bp-sm) {
+    margin-top: 12px;
+  }
 }
 
 .linksList {
@@ -24,5 +35,7 @@
 }
 
 .linksListLink {
+  display: block;
+  line-height: 0;
   font-size: var(--fz-2);
 }
