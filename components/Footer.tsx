@@ -12,23 +12,23 @@ const contactsList: ContactLink[] = [
   {
     link: 'https://t.me/dennis_kurochkin',
     title: 'Telegram',
-    icon: <FaTelegramPlane />
+    icon: <FaTelegramPlane />,
   },
   {
     link: 'https://www.linkedin.com/in/dennis-kurochkin/',
     title: 'LinkedIn',
-    icon: <FaLinkedinIn />
+    icon: <FaLinkedinIn />,
   },
   {
     link: 'https://github.com/dennis-kurochkin',
     title: 'GitHub',
-    icon: <FaGithubAlt />
+    icon: <FaGithubAlt />,
   },
   {
     link: 'https://career.habr.com/dennis-kurochkin',
     title: 'Habr Career (Хабр Карьера)',
-    icon: <SiHabr />
-  }
+    icon: <SiHabr />,
+  },
 ]
 
 const Footer = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
         Made by Dennis Kurochkin, 2021
       </p>
       <ul className={styles.linksList}>
-        {contactsList.map(({ link, title, icon}, index) => (
+        {contactsList.map(({ link, title, icon }, index) => (
           <li
             key={index}
             className={styles.linksListItem}
