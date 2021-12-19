@@ -1,14 +1,10 @@
-import type { InferGetStaticPropsType } from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import styles from '../styles/Home.module.scss'
 import Head from 'next/head'
 import Layout from '../layouts/layout'
 import BlogPostPreview from '../components/BlogPostPreview'
-
-export interface IBlogPostPreview {
-  id: string
-  title: string
-  publishDate: string
-}
+import { getSortedPostsData } from '../lib/staticBlog'
+import { IBlogPostPreview } from '../domain/blogPost'
 
 const MyCurrentJobLink = (
   <a
@@ -20,8 +16,8 @@ const MyCurrentJobLink = (
   </a>
 )
 
-export const getStaticProps = () => {
-  const blogPostPreviews: IBlogPostPreview[] = []
+export const getStaticProps: GetStaticProps = () => {
+  const blogPostPreviews: IBlogPostPreview[] = getSortedPostsData()
 
   return {
     props: {
@@ -36,7 +32,7 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <Head>
-        <title>My place in the Internet - Dennis Kurochkin</title>
+        <title>My place in the Internet · kurochkin.dev</title>
       </Head>
       <Layout
         title={'Hey there!'}
@@ -58,7 +54,7 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
           <div>
             <h2 className={styles.blogPostsTitle}>Latest blog posts</h2>
             <ul className={styles.blogPosts}>
-              {blogPostPreviews.map(({ id, title, publishDate }, index) => (
+              {blogPostPreviews.map(({ id, title, publishDate }: IBlogPostPreview, index: number) => (
                 <li
                   key={index}
                   className={styles.blogPostsItem}
