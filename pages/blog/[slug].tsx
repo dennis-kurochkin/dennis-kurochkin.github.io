@@ -3,6 +3,8 @@ import Layout from '../../layouts/layout'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getPostData, getPostsSlugs } from '../../lib/staticBlog'
 import { IBlogPost } from '../../domain/blogPost'
+import { HEAD_TITLE_POSTFIX } from '../../domain'
+import styles from '../../styles/PostPage.module.scss'
 
 interface IPostPageProps {
   postData: IBlogPost
@@ -27,12 +29,15 @@ const PostPage = ({ postData }: IPostPageProps) => {
   return (
     <>
       <Head>
-        <title>{postData.title} · kurochkin.dev</title>
+        <title>{postData.title} {HEAD_TITLE_POSTFIX}</title>
       </Head>
       <Layout
         title={postData.title}
       >
-        <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: postData.content }}
+        />
       </Layout>
     </>
   )

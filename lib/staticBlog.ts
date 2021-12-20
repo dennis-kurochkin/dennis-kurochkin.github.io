@@ -5,6 +5,7 @@ import { IBlogPost, IBlogPostPreview } from '../domain/blogPost'
 import dayjs from 'dayjs'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { DateFormats } from '../domain'
 
 const postsDirectory = path.resolve(process.cwd(), 'posts')
 
@@ -16,7 +17,7 @@ export const getPostData = async (slug: string): Promise<IBlogPost> => {
   return {
     id: slug,
     title: fileData.data.title,
-    publishDate: dayjs(fileData.data.date).format('DD MMM YYYY'),
+    publishDate: dayjs(fileData.data.date).format(DateFormats.COMMON),
     content: contentFile.toString(),
   }
 }
@@ -51,5 +52,5 @@ export const getSortedPostsData = (): IBlogPostPreview[] => {
     } else {
       return 0
     }
-  }).map(post => ({ ...post, publishDate:  dayjs(post.publishDate).format('DD MMM YYYY') }))
+  }).map(post => ({ ...post, publishDate:  dayjs(post.publishDate).format(DateFormats.COMMON) }))
 }

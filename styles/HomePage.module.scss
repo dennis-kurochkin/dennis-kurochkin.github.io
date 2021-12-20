@@ -17,17 +17,31 @@
   margin: 36px 0 24px;
   color: #f9b6b6;
   font-size: var(--fz-h2);
+
+  @media (max-width: $bp-md) {
+    margin: 32px 0 20px;
+  }
+
+  @media (max-width: $bp-sm) {
+    margin: 24px 0 18px;
+  }
 }
 
 .blogPosts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $bp-md) {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .blogPostsItem {
   display: flex;
+  width: 100%;
 }

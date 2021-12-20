@@ -2,6 +2,7 @@
   --card-border-radius: 4px;
   position: relative;
   display: flex;
+  width: 100%;
   border-radius: var(--card-border-radius);
   padding: 4px;
   background-image: linear-gradient(to right, #fde68a, #fca5a5, #fecaca);
@@ -11,6 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   padding: 16px 20px;
   background: var(--color-background);
   border-radius: var(--card-border-radius);

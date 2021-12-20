@@ -4,6 +4,6 @@ export interface IBlogPostPreview {
   publishDate: string
 }
 
-export interface IBlogPost extends IBlogPostPreview{
+export interface IBlogPost extends IBlogPostPreview {
   content: string
 }

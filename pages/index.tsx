@@ -1,10 +1,11 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/HomePage.module.scss'
 import Head from 'next/head'
 import Layout from '../layouts/layout'
 import BlogPostPreview from '../components/BlogPostPreview'
 import { getSortedPostsData } from '../lib/staticBlog'
 import { IBlogPostPreview } from '../domain/blogPost'
+import { HEAD_TITLE_POSTFIX } from '../domain'
 
 const MyCurrentJobLink = (
   <a
@@ -32,7 +33,7 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <Head>
-        <title>My place in the Internet · kurochkin.dev</title>
+        <title>My place in the Internet {HEAD_TITLE_POSTFIX}</title>
       </Head>
       <Layout
         title={'Hey there!'}

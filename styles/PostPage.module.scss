@@ -1,0 +1,11 @@
+.content {
+  font-size: var(--fz-2);
+}
+
+.content :first-child {
+  margin-top: 0;
+}
+
+.content :last-child {
+  margin-bottom: 0;
+}
