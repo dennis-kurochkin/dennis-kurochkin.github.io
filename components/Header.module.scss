@@ -2,3 +2,40 @@
   font-size: var(--fz-h1);
   margin: 0;
 }
+
+.nav {
+  margin: 0 0 16px;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navListItem {
+  font-size: var(--fz-2);
+  font-weight: bold;
+
+  & + .navListItem::before {
+    content: '/';
+    margin: 0 16px;
+  }
+}
+
+.navListLink {
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: var(--color-secondary);
+  }
+}
+
+.navListLinkActive {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}

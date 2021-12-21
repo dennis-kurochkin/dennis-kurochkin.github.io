@@ -4,7 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { getPostData, getPostsSlugs } from '../../lib/staticBlog'
 import { IBlogPost } from '../../domain/blogPost'
 import { HEAD_TITLE_POSTFIX } from '../../domain'
-import styles from '../../styles/PostPage.module.scss'
+import styles from './[slug].module.scss'
 
 interface IPostPageProps {
   postData: IBlogPost

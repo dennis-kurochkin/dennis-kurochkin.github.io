@@ -1,5 +1,5 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import styles from '../styles/HomePage.module.scss'
+import styles from './index.module.scss'
 import Head from 'next/head'
 import Layout from '../layouts/layout'
 import BlogPostPreview from '../components/BlogPostPreview'

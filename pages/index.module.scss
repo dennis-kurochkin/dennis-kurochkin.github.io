@@ -15,7 +15,7 @@
 
 .blogPostsTitle {
   margin: 36px 0 24px;
-  color: #f9b6b6;
+  color: var(--color-secondary);
   font-size: var(--fz-h2);
 
   @media (max-width: $bp-md) {
