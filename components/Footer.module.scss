@@ -38,4 +38,8 @@
   display: block;
   line-height: 0;
   font-size: var(--fz-2);
+
+  @media (max-width: $bp-sm) {
+    font-size: 22px;
+  }
 }
