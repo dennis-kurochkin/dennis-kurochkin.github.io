@@ -32,10 +32,9 @@ export const getPostsSlugs = (): { params: { slug: string } }[] => {
   }))
 }
 
-export const getSortedPostsData = (): IBlogPostPreview[] => {
+export const getSortedPostsData = (amount?: number): IBlogPostPreview[] => {
   const fileNames = fs.readdirSync(postsDirectory)
-
-  return fileNames.map(fileName => {
+  const blogPostPreviews = fileNames.map(fileName => {
     const fileContents = fs.readFileSync(path.resolve(postsDirectory, fileName), 'utf8')
     const fileData = matter(fileContents)
 
@@ -53,4 +52,6 @@ export const getSortedPostsData = (): IBlogPostPreview[] => {
       return 0
     }
   }).map(post => ({ ...post, publishDate:  dayjs(post.publishDate).format(DateFormats.COMMON) }))
+
+  return amount ? blogPostPreviews.slice(0, amount) : blogPostPreviews
 }
