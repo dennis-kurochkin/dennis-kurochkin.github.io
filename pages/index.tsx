@@ -1,7 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import styles from './index.module.scss'
 import Layout from '../layouts/layout'
-import { getSortedPostsData } from '../lib/staticBlog'
+import { getSortedPostsData } from '../lib/StaticBlog.lib'
 import { IBlogPostPreview } from '../domain/blogPost'
 import BlogPostPreviewList from '../components/BlogPostPreviewList'
 
