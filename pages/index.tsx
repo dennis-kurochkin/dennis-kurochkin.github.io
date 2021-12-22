@@ -1,9 +1,9 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import styles from './index.module.scss'
 import Layout from '../layouts/layout'
-import BlogPostPreview from '../components/BlogPostPreview'
 import { getSortedPostsData } from '../lib/staticBlog'
 import { IBlogPostPreview } from '../domain/blogPost'
+import BlogPostPreviewList from '../components/BlogPostPreviewList'
 
 const MyCurrentJobLink = (
   <a
@@ -16,7 +16,7 @@ const MyCurrentJobLink = (
 )
 
 export const getStaticProps: GetStaticProps = () => {
-  const blogPostPreviews: IBlogPostPreview[] = getSortedPostsData()
+  const blogPostPreviews: IBlogPostPreview[] = getSortedPostsData(3)
 
   return {
     props: {
@@ -48,20 +48,9 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
       {hasBlogPostPreviews && (
         <div>
           <h2 className={styles.blogPostsTitle}>Latest blog posts</h2>
-          <ul className={styles.blogPosts}>
-            {blogPostPreviews.map(({ id, title, publishDate }: IBlogPostPreview, index: number) => (
-              <li
-                key={index}
-                className={styles.blogPostsItem}
-              >
-                <BlogPostPreview
-                  id={id}
-                  title={title}
-                  publishDate={publishDate}
-                />
-              </li>
-            ))}
-          </ul>
+          <BlogPostPreviewList
+            blogPostPreviews={blogPostPreviews}
+          />
         </div>
       )}
     </Layout>

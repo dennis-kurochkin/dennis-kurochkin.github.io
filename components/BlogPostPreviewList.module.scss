@@ -1,0 +1,20 @@
+@import '../styles/variables';
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: $bp-md) {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.blogPostsItem {
+  display: flex;
+  width: 100%;
+}
