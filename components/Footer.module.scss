@@ -13,7 +13,7 @@
 
 .creditsText {
   margin: 0;
-  font-size: var(--fz-3);
+  font-size: var(--fz-overline);
 
   @media (max-width: $bp-sm) {
     margin-top: 12px;
@@ -37,7 +37,7 @@
 .linksListLink {
   display: block;
   line-height: 0;
-  font-size: var(--fz-2);
+  font-size: var(--fz-text-1);
 
   @media (max-width: $bp-sm) {
     font-size: 22px;

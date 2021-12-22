@@ -1,5 +1,6 @@
 ---
 title: 'My first little post on my blog'
+tags: Life,Career
 date: '2021-12-19'
 ---
 So, this is my first blog post on my very own website! I just made this blog and I hope there will be a healthy amount of good articles very soon.

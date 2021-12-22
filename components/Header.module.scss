@@ -16,7 +16,7 @@
 }
 
 .navListItem {
-  font-size: var(--fz-2);
+  font-size: var(--fz-text-1);
   font-weight: bold;
 
   & + .navListItem::before {

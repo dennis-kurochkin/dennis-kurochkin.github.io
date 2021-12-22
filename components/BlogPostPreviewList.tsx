@@ -9,7 +9,7 @@ interface IBlogPostPreviewListProps {
 const BlogPostPreviewList = ({ blogPostPreviews }: IBlogPostPreviewListProps) => {
   return (
     <ul className={styles.blogPosts}>
-      {blogPostPreviews.map(({ id, title, publishDate }: IBlogPostPreview, index: number) => (
+      {blogPostPreviews.map(({ id, title, publishDate, tags }: IBlogPostPreview, index: number) => (
         <li
           key={index}
           className={styles.blogPostsItem}
@@ -18,6 +18,7 @@ const BlogPostPreviewList = ({ blogPostPreviews }: IBlogPostPreviewListProps) =>
             id={id}
             title={title}
             publishDate={publishDate}
+            tags={tags}
           />
         </li>
       ))}

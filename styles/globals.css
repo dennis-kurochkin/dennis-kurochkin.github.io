@@ -5,15 +5,16 @@
   --color-text: #ffffff;
   --fz-h1: 48px;
   --fz-h2: 32px;
-  --fz-2: 20px;
-  --fz-3: 14px;
+  --fz-text-1: 20px;
+  --fz-text-2: 16px;
+  --fz-overline: 14px;
 }
 
 @media (max-width: 600px) {
   :root {
     --fz-h1: 42px;
     --fz-h2: 28px;
-    --fz-2: 18px;
+    --fz-text-1: 18px;
   }
 }
 

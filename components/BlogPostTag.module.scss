@@ -1,0 +1,13 @@
+.self {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: var(--fz-overline);
+  line-height: 1;
+  border-radius: 4px;
+  background: var(--color-background-secondary);
+}
+
+.lg {
+  padding: 8px 14px;
+  font-size: var(--fz-text-2);
+}

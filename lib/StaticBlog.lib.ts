@@ -19,6 +19,7 @@ export const getPostData = async (slug: string): Promise<IBlogPost> => {
     title: fileData.data.title,
     publishDate: dayjs(fileData.data.date).format(DateFormats.COMMON),
     content: contentFile.toString(),
+    tags: fileData.data.tags?.split(',') ?? [],
   }
 }
 
@@ -42,6 +43,7 @@ export const getSortedPostsData = (amount?: number): IBlogPostPreview[] => {
       id: fileName.replace('.md', ''),
       title: fileData.data.title,
       publishDate: dayjs(fileData.data.date).toDate(),
+      tags: fileData.data.tags?.split(',') ?? [],
     }
   }).sort(({ publishDate: a }, { publishDate: b }) => {
     if (a < b) {

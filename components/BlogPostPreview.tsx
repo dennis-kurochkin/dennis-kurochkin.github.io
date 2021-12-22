@@ -1,13 +1,15 @@
 import styles from './BlogPostPreview.module.scss'
 import Link from 'next/link'
+import BlogPostTag from './BlogPostTag'
 
 interface IBlogPostPreviewProps {
   id: string
   title: string
   publishDate: string
+  tags: string[]
 }
 
-const BlogPostPreview = ({ id, title, publishDate }: IBlogPostPreviewProps) => {
+const BlogPostPreview = ({ id, title, publishDate, tags }: IBlogPostPreviewProps) => {
   return (
     <article className={styles.self}>
       <div className={styles.wrapper}>
@@ -18,6 +20,19 @@ const BlogPostPreview = ({ id, title, publishDate }: IBlogPostPreviewProps) => {
             </a>
           </Link>
         </h3>
+        {Boolean(tags.length) && (
+          <ul className={styles.tags}>
+            {tags.map((tag, index) => (
+              <li
+                key={index}
+              >
+                <BlogPostTag
+                  title={tag}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
         <p className={styles.date}>
           {publishDate}
         </p>

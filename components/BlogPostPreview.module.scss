@@ -53,6 +53,16 @@
   }
 }
 
+.tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+  margin: -4px -2px 12px;
+  padding: 0;
+  list-style-type: none;
+}
+
 .date {
   margin: 0;
   font-size: 12px;
