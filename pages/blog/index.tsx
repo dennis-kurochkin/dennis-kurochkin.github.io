@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps = () => {
   }
 }
 
-const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BlogPage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const hasBlogPostPreviews = Boolean(blogPostPreviews.length)
 
   return (
@@ -30,4 +30,4 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
   )
 }
 
-export default HomePage
+export default BlogPage
