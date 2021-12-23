@@ -3,6 +3,8 @@ import Layout from '../../layouts/layout'
 import { getSortedPostsData } from '../../lib/StaticBlog.lib'
 import { IBlogPostPreview } from '../../domain/blogPost'
 import BlogPostPreviewList from '../../components/BlogPostPreviewList'
+import Head from 'next/head'
+import { HEAD_TITLE_POSTFIX } from '../../domain'
 
 export const getStaticProps: GetStaticProps = () => {
   const blogPostPreviews: IBlogPostPreview[] = getSortedPostsData()
@@ -18,15 +20,20 @@ const BlogPage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
   const hasBlogPostPreviews = Boolean(blogPostPreviews.length)
 
   return (
-    <Layout
-      title={'My blog posts'}
-    >
-      {hasBlogPostPreviews && (
-        <BlogPostPreviewList
-          blogPostPreviews={blogPostPreviews}
-        />
-      )}
-    </Layout>
+    <>
+      <Head>
+        <title>Blog {HEAD_TITLE_POSTFIX}</title>
+      </Head>
+      <Layout
+        title={'My blog posts'}
+      >
+        {hasBlogPostPreviews && (
+          <BlogPostPreviewList
+            blogPostPreviews={blogPostPreviews}
+          />
+        )}
+      </Layout>
+    </>
   )
 }
 
