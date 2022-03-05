@@ -25,6 +25,7 @@ const BlogPostPreview = ({ id, title, publishDate, tags }: IBlogPostPreviewProps
             {tags.map((tag, index) => (
               <li
                 key={index}
+                className={styles.tagWrapper}
               >
                 <BlogPostTag
                   title={tag}

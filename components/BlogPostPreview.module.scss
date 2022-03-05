@@ -13,7 +13,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
   padding: 16px 24px 16px 20px;
   background: var(--color-background);
@@ -57,14 +56,21 @@
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
   margin: -4px -2px 12px;
   padding: 0;
   list-style-type: none;
 }
 
+.tagWrapper {
+  display: block;
+  line-height: 1;
+}
+
 .date {
-  margin: 0;
+  margin: auto 0 0;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
