@@ -33,3 +33,9 @@ body {
 a {
   color: var(--color-text)
 }
+
+.code-inline {
+  padding: 4px 8px;
+  background: #2d2d2d;
+  border-radius: 2px;
+}
