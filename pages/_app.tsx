@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { HEAD_TITLE_POSTFIX } from '../domain'
 
+import 'prismjs/themes/prism-tomorrow.css'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>

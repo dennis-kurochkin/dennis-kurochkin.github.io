@@ -3,8 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import { IBlogPost, IBlogPostPreview } from '../domain/blogPost'
 import dayjs from 'dayjs'
-import { remark } from 'remark'
-import html from 'remark-html'
 import { DateFormats } from '../domain'
 
 const postsDirectory = path.resolve(process.cwd(), 'posts')
@@ -12,13 +10,12 @@ const postsDirectory = path.resolve(process.cwd(), 'posts')
 export const getPostData = async (slug: string): Promise<IBlogPost> => {
   const fileContents = fs.readFileSync(path.resolve(postsDirectory, `${slug}.md`))
   const fileData = matter(fileContents)
-  const contentFile = await remark().use(html).process(fileData.content)
 
   return {
     id: slug,
     title: fileData.data.title,
     publishDate: dayjs(fileData.data.date).format(DateFormats.COMMON),
-    content: contentFile.toString(),
+    content: fileData.content,
     tags: fileData.data.tags?.split(',') ?? [],
   }
 }
