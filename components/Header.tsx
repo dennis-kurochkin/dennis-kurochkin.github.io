@@ -1,8 +1,8 @@
-import styles from './Header.module.scss'
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import classnames from 'classnames'
+import styles from './Header.module.scss'
 
 const NavElement = ({ children, href, isActive }: { children: ReactNode, href: string, isActive: boolean }) => {
   return (
@@ -17,7 +17,7 @@ const NavElement = ({ children, href, isActive }: { children: ReactNode, href: s
 }
 
 interface HeaderProps {
-  title: string | JSX.Element
+  title: string | ReactNode
 }
 
 const Header = ({ title }: HeaderProps) => {
@@ -31,7 +31,7 @@ const Header = ({ title }: HeaderProps) => {
       title: 'Blog',
       href: '/blog',
     },
-  ].map(route => ({
+  ].map((route) => ({
     ...route,
     isActive: (router.route.includes(route.href) && route.href !== '/') || router.route === route.href,
   }))
@@ -40,13 +40,13 @@ const Header = ({ title }: HeaderProps) => {
     <header>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          {navRoutes.map(({ href, isActive, title }, index) => (
+          {navRoutes.map(({ href, isActive, title: routeTitle }, index) => (
             <NavElement
               key={index}
               href={href}
               isActive={isActive}
             >
-              {title}
+              {routeTitle}
             </NavElement>
           ))}
         </ul>

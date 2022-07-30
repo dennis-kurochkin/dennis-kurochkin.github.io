@@ -1,11 +1,12 @@
-import styles from './Footer.module.scss'
 import { FaGithubAlt, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa'
 import { SiHabr } from 'react-icons/si'
+import { ReactNode } from 'react'
+import styles from './Footer.module.scss'
 
 type ContactLink = {
   link: string
   title: string
-  icon: JSX.Element
+  icon: ReactNode
 }
 
 const contactsList: ContactLink[] = [

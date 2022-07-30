@@ -1,9 +1,9 @@
 import * as fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { IBlogPost, IBlogPostPreview } from '../domain/blogPost'
 import dayjs from 'dayjs'
-import { DateFormats } from '../domain'
+import { IBlogPost, IBlogPostPreview } from '../domain/blogPost'
+import { DATE_FORMAT_COMMON } from '../domain'
 
 const postsDirectory = path.resolve(process.cwd(), 'posts')
 
@@ -14,7 +14,7 @@ export const getPostData = async (slug: string): Promise<IBlogPost> => {
   return {
     id: slug,
     title: fileData.data.title,
-    publishDate: dayjs(fileData.data.date).format(DateFormats.COMMON),
+    publishDate: dayjs(fileData.data.date).format(DATE_FORMAT_COMMON),
     content: fileData.content,
     tags: fileData.data.tags?.split(',') ?? [],
   }
@@ -23,7 +23,7 @@ export const getPostData = async (slug: string): Promise<IBlogPost> => {
 export const getPostsSlugs = (): { params: { slug: string } }[] => {
   const fileNames = fs.readdirSync(postsDirectory)
 
-  return fileNames.map(fileName => ({
+  return fileNames.map((fileName) => ({
     params: {
       slug: fileName.replace('.md', ''),
     },
@@ -32,7 +32,7 @@ export const getPostsSlugs = (): { params: { slug: string } }[] => {
 
 export const getSortedPostsData = (amount?: number): IBlogPostPreview[] => {
   const fileNames = fs.readdirSync(postsDirectory)
-  const blogPostPreviews = fileNames.map(fileName => {
+  const blogPostPreviews = fileNames.map((fileName) => {
     const fileContents = fs.readFileSync(path.resolve(postsDirectory, fileName), 'utf8')
     const fileData = matter(fileContents)
 
@@ -45,12 +45,11 @@ export const getSortedPostsData = (amount?: number): IBlogPostPreview[] => {
   }).sort(({ publishDate: a }, { publishDate: b }) => {
     if (a < b) {
       return 1
-    } else if (a > b) {
+    } if (a > b) {
       return -1
-    } else {
-      return 0
     }
-  }).map(post => ({ ...post, publishDate:  dayjs(post.publishDate).format(DateFormats.COMMON) }))
+    return 0
+  }).map((post) => ({ ...post, publishDate: dayjs(post.publishDate).format(DATE_FORMAT_COMMON) }))
 
   return amount ? blogPostPreviews.slice(0, amount) : blogPostPreviews
 }

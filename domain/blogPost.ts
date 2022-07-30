@@ -8,3 +8,4 @@ export interface IBlogPostPreview {
 export interface IBlogPost extends IBlogPostPreview {
   content: string
 }
+

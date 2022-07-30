@@ -1,5 +1,5 @@
-import styles from './BlogPostPreview.module.scss'
 import Link from 'next/link'
+import styles from './BlogPostPreview.module.scss'
 import BlogPostTag from './BlogPostTag'
 
 interface IBlogPostPreviewProps {
