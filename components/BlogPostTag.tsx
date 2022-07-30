@@ -1,5 +1,5 @@
-import styles from './BlogPostTag.module.scss'
 import classnames from 'classnames'
+import styles from './BlogPostTag.module.scss'
 
 interface IBlogPostTagProps {
   title: string
