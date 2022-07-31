@@ -20,6 +20,20 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    "paths": {
+      "~/components": ["components"],
+      "~/components/*": ["components/*"],
+      "~/constants": ["constants"],
+      "~/constants/*": ["constants/*"],
+      "~/helpers": ["helpers"],
+      "~/helpers/*": ["helpers/*"],
+      "~/hooks": ["hooks"],
+      "~/hooks/*": ["hooks/*"],
+      "~/lib": ["lib"],
+      "~/lib/*": ["lib/*"],
+      "~/public": ["public"],
+      "~/public/*": ["public/*"]
+    },
   },
   "include": [
     "next-env.d.ts",
