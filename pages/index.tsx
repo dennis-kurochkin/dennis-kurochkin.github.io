@@ -5,6 +5,7 @@ import { getSortedPostsData } from '~/lib/StaticBlog.lib'
 import { IBlogPostPreview } from '~/constants/blogPost'
 import BlogPostPreviewList from '~/components/BlogPostPreviewList'
 import { getPageTitle } from '~/helpers'
+import Section from '~/components/Section'
 import styles from './index.module.scss'
 
 const MyCurrentJobLink = (
@@ -28,8 +29,6 @@ export const getStaticProps: GetStaticProps = () => {
 }
 
 const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const hasBlogPostPreviews = !!(blogPostPreviews.length)
-
   return (
     <>
       <Head>
@@ -66,14 +65,22 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
             I like running, playing ukulele and filling my GitHub streak every day.
           </p>
         </div>
-        {hasBlogPostPreviews && (
-          <div>
-            <h2 className={styles.blogPostsTitle}>Latest blog posts</h2>
+        {!!(blogPostPreviews.length) && (
+          <Section
+            title={'Latest blog posts'}
+            icon={'📝'}
+          >
             <BlogPostPreviewList
               blogPostPreviews={blogPostPreviews}
             />
-          </div>
+          </Section>
         )}
+        <Section
+          title={'Side projects'}
+          icon={'🐕'}
+        >
+          side projects
+        </Section>
       </Layout>
     </>
   )

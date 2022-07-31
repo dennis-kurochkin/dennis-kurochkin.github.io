@@ -1,0 +1,22 @@
+@import '../styles/variables';
+
+.title {
+  display: flex;
+  align-items: center;
+  //gap: 8px;
+  margin: 0 0 24px;
+  color: var(--color-secondary);
+  font-size: var(--font-size-600);
+
+  @media (max-width: $bp-md) {
+    margin: 32px 0 20px;
+  }
+
+  @media (max-width: $bp-sm) {
+    margin: 24px 0 18px;
+  }
+}
+
+.icon {
+  width: 44px;
+}

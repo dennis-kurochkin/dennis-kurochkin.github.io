@@ -1,5 +1,5 @@
 .title {
-  font-size: var(--fz-h1);
+  font-size: var(--font-size-700);
   margin: 0;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .navListItem {
-  font-size: var(--fz-text-1);
+  font-size: var(--font-size-500);
   font-weight: bold;
 
   & + .navListItem::before {

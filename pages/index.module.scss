@@ -2,7 +2,7 @@
 
 .text {
   margin: 0;
-  font-size: var(--fz-text-1);
+  font-size: var(--font-size-500);
 
   & + .text {
     margin-top: 16px;
@@ -10,19 +10,5 @@
     @media (max-width: $bp-sm) {
       margin-top: 12px;
     }
-  }
-}
-
-.blogPostsTitle {
-  margin: 36px 0 24px;
-  color: var(--color-secondary);
-  font-size: var(--fz-h2);
-
-  @media (max-width: $bp-md) {
-    margin: 32px 0 20px;
-  }
-
-  @media (max-width: $bp-sm) {
-    margin: 24px 0 18px;
   }
 }

@@ -3,18 +3,18 @@
   --color-background-secondary: #3F3351;
   --color-secondary: #f9b6b6;
   --color-text: #ffffff;
-  --fz-h1: 48px;
-  --fz-h2: 32px;
-  --fz-text-1: 20px;
-  --fz-text-2: 16px;
-  --fz-overline: 14px;
+  --font-size-300: 14px;
+  --font-size-400: 16px;
+  --font-size-500: 20px;
+  --font-size-600: 32px;
+  --font-size-700: 48px;
 }
 
 @media (max-width: 600px) {
   :root {
-    --fz-h1: 42px;
-    --fz-h2: 28px;
-    --fz-text-1: 18px;
+    --font-size-500: 18px;
+    --font-size-600: 28px;
+    --font-size-700: 42px;
   }
 }
 
