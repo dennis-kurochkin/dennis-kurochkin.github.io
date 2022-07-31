@@ -2,8 +2,8 @@ import * as fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import dayjs from 'dayjs'
-import { IBlogPost, IBlogPostPreview } from '../domain/blogPost'
-import { DATE_FORMAT_COMMON } from '../domain'
+import { IBlogPost, IBlogPostPreview } from '~/constants/blogPost'
+import { DATE_FORMAT_COMMON } from '~/constants'
 
 const postsDirectory = path.resolve(process.cwd(), 'posts')
 

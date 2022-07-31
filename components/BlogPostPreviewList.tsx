@@ -1,5 +1,5 @@
+import { IBlogPostPreview } from '~/constants/blogPost'
 import styles from './BlogPostPreviewList.module.scss'
-import { IBlogPostPreview } from '../domain/blogPost'
 import BlogPostPreview from './BlogPostPreview'
 
 interface IBlogPostPreviewListProps {

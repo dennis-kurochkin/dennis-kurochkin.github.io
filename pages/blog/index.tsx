@@ -1,10 +1,10 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import Layout from '../../layouts/layout'
-import { getSortedPostsData } from '../../lib/StaticBlog.lib'
-import { IBlogPostPreview } from '../../domain/blogPost'
-import BlogPostPreviewList from '../../components/BlogPostPreviewList'
-import { getPageTitle } from '../../helpers'
+import Layout from '~/components/Layout'
+import { getSortedPostsData } from '~/lib/StaticBlog.lib'
+import { IBlogPostPreview } from '~/constants/blogPost'
+import BlogPostPreviewList from '~/components/BlogPostPreviewList'
+import { getPageTitle } from '~/helpers'
 
 export const getStaticProps: GetStaticProps = () => {
   const blogPostPreviews: IBlogPostPreview[] = getSortedPostsData()
