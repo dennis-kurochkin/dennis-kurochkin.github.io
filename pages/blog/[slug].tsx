@@ -3,12 +3,12 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import ReactMarkdown from 'react-markdown'
 import { Prism } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
-import Layout from '../../layouts/layout'
-import { getPostData, getPostsSlugs } from '../../lib/StaticBlog.lib'
-import { IBlogPost } from '../../domain/blogPost'
-import { HEAD_TITLE_POSTFIX } from '../../domain'
+import BlogPostTag from '~/components/BlogPostTag'
+import Layout from '~/components/Layout'
+import { getPostData, getPostsSlugs } from '~/lib/StaticBlog.lib'
+import { IBlogPost } from '~/constants/blogPost'
+import { HEAD_TITLE_POSTFIX } from '~/constants'
 import styles from './[slug].module.scss'
-import BlogPostTag from '../../components/BlogPostTag'
 
 interface IBlogPostPageProps {
   postData: IBlogPost

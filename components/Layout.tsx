@@ -1,12 +1,12 @@
-import styles from './layout.module.scss'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Container from '../components/Container'
 import type { ReactNode } from 'react'
+import Header from '~/components/Header'
+import Footer from '~/components/Footer'
+import Container from '~/components/Container'
+import styles from './Layout.module.scss'
 
 interface LayoutProps {
   children: ReactNode | ReactNode[],
-  title: string | JSX.Element
+  title: string | ReactNode
 }
 
 const Layout = ({ children, title }: LayoutProps) => {
