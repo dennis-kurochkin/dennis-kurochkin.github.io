@@ -3,9 +3,8 @@
 .title {
   display: flex;
   align-items: center;
-  //gap: 8px;
   margin: 0 0 24px;
-  color: var(--color-secondary);
+  color: var(--colors-purple-100);
   font-size: var(--font-size-600);
 
   @media (max-width: $bp-md) {

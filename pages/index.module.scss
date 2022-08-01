@@ -12,3 +12,14 @@
     }
   }
 }
+
+.sideProjectsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: $bp-md) {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+}

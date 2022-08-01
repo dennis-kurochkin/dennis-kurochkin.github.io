@@ -36,7 +36,9 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p className={styles.creditsText}>
-        Made by Dennis Kurochkin, 2021
+        Made with passion 🏃 by Dennis Kurochkin, © 2020 -
+        {' '}
+        {new Date().getFullYear()}
       </p>
       <ul className={styles.linksList}>
         {contactsList.map(({ link, title, icon }, index) => (

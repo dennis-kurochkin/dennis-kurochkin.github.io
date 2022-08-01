@@ -6,6 +6,8 @@ import { IBlogPostPreview } from '~/constants/blogPost'
 import BlogPostPreviewList from '~/components/BlogPostPreviewList'
 import { getPageTitle } from '~/helpers'
 import Section from '~/components/Section'
+import { projects } from '~/features/projects/data'
+import ProjectCard from '~/components/ProjectCard'
 import styles from './index.module.scss'
 
 const MyCurrentJobLink = (
@@ -65,6 +67,19 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
             I like running, playing ukulele and filling my GitHub streak every day.
           </p>
         </div>
+        <Section
+          title={'Side projects'}
+          icon={'🐕'}
+        >
+          <div className={styles.sideProjectsRow}>
+            {projects.slice(0, 3).map((project, index) => (
+              <ProjectCard
+                key={`${project.title}-${index}`}
+                project={project}
+              />
+            ))}
+          </div>
+        </Section>
         {!!(blogPostPreviews.length) && (
           <Section
             title={'Latest blog posts'}
@@ -75,12 +90,6 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
             />
           </Section>
         )}
-        <Section
-          title={'Side projects'}
-          icon={'🐕'}
-        >
-          side projects
-        </Section>
       </Layout>
     </>
   )
