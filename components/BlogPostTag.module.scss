@@ -1,13 +1,13 @@
 .self {
   display: inline-block;
   padding: 4px 8px;
-  font-size: var(--fz-overline);
+  font-size: var(--font-size-300);
   line-height: 1;
   border-radius: 4px;
-  background: var(--color-background-secondary);
+  background: var(--colors-purple-700);
 }
 
 .lg {
   padding: 8px 14px;
-  font-size: var(--fz-text-2);
+  font-size: var(--font-size-400);
 }

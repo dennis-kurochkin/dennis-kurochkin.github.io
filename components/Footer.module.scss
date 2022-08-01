@@ -13,10 +13,11 @@
 
 .creditsText {
   margin: 0;
-  font-size: var(--fz-overline);
+  font-size: var(--font-size-300);
 
   @media (max-width: $bp-sm) {
     margin-top: 12px;
+    text-align: center;
   }
 }
 
@@ -37,7 +38,7 @@
 .linksListLink {
   display: block;
   line-height: 0;
-  font-size: var(--fz-text-1);
+  font-size: var(--font-size-500);
 
   @media (max-width: $bp-sm) {
     font-size: 22px;

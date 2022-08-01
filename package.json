@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
+    "date-fns": "^2.29.1",
     "dayjs": "^1.10.7",
     "eslint-config-endurant-react": "^1.0.0",
     "gray-matter": "^4.0.3",

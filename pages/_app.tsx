@@ -1,8 +1,8 @@
 import 'modern-normalize/modern-normalize.css'
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { HEAD_TITLE_POSTFIX } from '~/constants'
+import '../styles/globals.scss'
 
 import 'prismjs/themes/prism-tomorrow.css'
 

@@ -2,7 +2,7 @@
 
 .text {
   margin: 0;
-  font-size: var(--fz-text-1);
+  font-size: var(--font-size-500);
 
   & + .text {
     margin-top: 16px;
@@ -13,16 +13,13 @@
   }
 }
 
-.blogPostsTitle {
-  margin: 36px 0 24px;
-  color: var(--color-secondary);
-  font-size: var(--fz-h2);
+.sideProjectsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 
   @media (max-width: $bp-md) {
-    margin: 32px 0 20px;
-  }
-
-  @media (max-width: $bp-sm) {
-    margin: 24px 0 18px;
+    gap: 12px;
+    grid-template-columns: 1fr;
   }
 }

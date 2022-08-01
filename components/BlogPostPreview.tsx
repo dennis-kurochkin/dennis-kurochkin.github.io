@@ -13,6 +13,9 @@ const BlogPostPreview = ({ id, title, publishDate, tags }: IBlogPostPreviewProps
   return (
     <article className={styles.self}>
       <div className={styles.wrapper}>
+        <p className={styles.date}>
+          {publishDate}
+        </p>
         <h3 className={styles.title}>
           <Link href={`/blog/${id}`}>
             <a>
@@ -34,9 +37,6 @@ const BlogPostPreview = ({ id, title, publishDate, tags }: IBlogPostPreviewProps
             ))}
           </ul>
         )}
-        <p className={styles.date}>
-          {publishDate}
-        </p>
       </div>
     </article>
   )

@@ -9,7 +9,7 @@
 
 .content {
   margin: 0 0 32px;
-  font-size: var(--fz-text-1);
+  font-size: var(--font-size-500);
 }
 
 .content :first-child {
@@ -26,14 +26,14 @@
 
 .publishTitle {
   margin: 0 0 4px;
-  font-size: var(--fz-overline);
+  font-size: var(--font-size-300);
   letter-spacing: 1px;
   font-weight: bold;
-  color: var(--color-secondary);
+  color: var(--colors-purple-100);
   text-transform: uppercase;
 }
 
 .publishDate {
   margin: 0;
-  font-size: var(--fz-text-2);
+  font-size: var(--font-size-400);
 }

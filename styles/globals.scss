@@ -1,0 +1,50 @@
+:root {
+  --colors-purple-100: #f9b6b6;
+  --colors-purple-200: #58529a;
+  --colors-purple-300: #413757;
+  --colors-purple-400: #3F3351;
+  --colors-purple-500: #292647;
+  --colors-purple-700: #1F1D36;
+  --colors-purple-800: #1b192f;
+  --colors-purple-900: #151425;
+  --colors-white-400: #ffffff;
+  --linear-background-400: linear-gradient(to right, #fde68a, #fca5a5, #fecaca);
+  --linear-background-500: linear-gradient(60deg, #e0c96c, #e78a8a, #c99494);
+  --shadow-400: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font-size-200: 12px;
+  --font-size-300: 14px;
+  --font-size-400: 16px;
+  --font-size-500: 20px;
+  --font-size-600: 32px;
+  --font-size-700: 48px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --font-size-500: 18px;
+    --font-size-600: 28px;
+    --font-size-700: 42px;
+  }
+}
+
+::selection {
+  background: var(--colors-purple-400);
+  color: var(--colors-white-400);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--colors-white-400);
+  line-height: 1.65;
+  background: var(--colors-purple-700);
+}
+
+a {
+  color: var(--colors-white-400)
+}
+
+.code-inline {
+  padding: 4px 8px;
+  background: #2d2d2d;
+  border-radius: 2px;
+}

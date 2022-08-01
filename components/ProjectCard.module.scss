@@ -1,0 +1,46 @@
+@import '../styles/variables';
+
+.card {
+  --card-border-radius: 4px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: 4px;
+  background-color: var(--colors-purple-400);
+}
+
+.cardInner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 24px 20px 20px;
+  background: var(--colors-purple-500);
+  border-radius: var(--card-border-radius);
+
+  @media (max-width: $bp-sm) {
+    padding: 16px 20px 16px 16px;
+  }
+}
+
+.date {
+  margin: 0 0 8px;
+  font-size: var(--font-size-200);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  margin: 0 0 4px;
+}
+
+.description {
+  margin: 0 0 auto;
+  font-size: var(--font-size-400);
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+}
