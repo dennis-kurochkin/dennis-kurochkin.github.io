@@ -1,17 +1,18 @@
 import { ReactNode } from 'react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import classnames from 'classnames'
+import { HiOutlineExternalLink } from 'react-icons/hi'
 import styles from './Header.module.scss'
 
 const NavElement = ({ children, href, isActive }: { children: ReactNode, href: string, isActive: boolean }) => {
   return (
     <li className={styles.navListItem}>
-      <Link href={href}>
+      <NextLink href={href}>
         <a className={classnames(styles.navListLink, isActive && styles.navListLinkActive)}>
           {children}
         </a>
-      </Link>
+      </NextLink>
     </li>
   )
 }
@@ -49,6 +50,17 @@ const Header = ({ title }: HeaderProps) => {
               {routeTitle}
             </NavElement>
           ))}
+          <li className={styles.navListItem}>
+            <a
+              href={'/CV.pdf'}
+              className={styles.navListLink}
+              target={'_blank'}
+              rel={'noreferrer'}
+            >
+              CV
+              <HiOutlineExternalLink />
+            </a>
+          </li>
         </ul>
       </nav>
       <h1 className={styles.title}>
