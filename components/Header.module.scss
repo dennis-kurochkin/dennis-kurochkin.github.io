@@ -26,8 +26,10 @@
 }
 
 .navListLink {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
   text-decoration: none;
-  padding-bottom: 2px;
   border-bottom: 2px solid transparent;
 
   &:hover {
