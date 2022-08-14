@@ -61,10 +61,11 @@ const HomePage = ({ blogPostPreviews }: InferGetStaticPropsType<typeof getStatic
             {' '}
             and do my job with passion 🏃
             <br />
-            My stack is JavaScript, TypeScript, Vue, React and Node.js. Love &apos;em all ❤️
-          </p>
-          <p className={styles.text}>
-            I like running, playing ukulele and filling my GitHub streak every day.
+            My
+            {' '}
+            <strong>stack</strong>
+            {' '}
+            is JavaScript, TypeScript, Vue, React and Node.js. Love &apos;em all ❤️
           </p>
         </div>
         <Section
