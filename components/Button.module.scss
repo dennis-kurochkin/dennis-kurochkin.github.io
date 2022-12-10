@@ -4,9 +4,12 @@
   text-decoration: none;
   font-size: var(--font-size-400);
   font-weight: 500;
+  line-height: 1.5;
+  color: var(--colors-white-400);
   background: var(--colors-purple-800);
   border: 1px solid var(--colors-purple-900);
   border-radius: 4px;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--colors-purple-700);
