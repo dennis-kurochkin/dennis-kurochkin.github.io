@@ -4,6 +4,7 @@
     "JSX": true
   },
   "rules": {
+    "jsx-a11y/media-has-caption": ["off", "never"],
     "react/destructuring-assignment": ["warn", "always"]
   }
 }

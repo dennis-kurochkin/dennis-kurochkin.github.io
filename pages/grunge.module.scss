@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.audio {
+  position: absolute;
+  z-index: 3;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  position: relative;
+  z-index: 2;
+  font-family: "Rubik Iso", system-ui;
+  text-transform: uppercase;
+  color: white;
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.ursusSitting {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+}
+
+.ursusHead {
+  position: absolute;
+  z-index: 3;
+  top: 90px;
+  left: 40px;
+  transform: rotate(50deg);
+}
+
+.polina1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.polina2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.lana1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lana2 {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transform: rotate(20deg);
+  box-shadow: -27px 40px 41px 7px rgba(34, 60, 80, 0.52);
+}
