@@ -40,7 +40,7 @@ const GrungePage = () => {
           autoPlay
         >
           <source
-            src={'foo-fighters-everlong.mp3'}
+            src={'music.mp3'}
             type={'audio/mpeg'}
           />
           Your browser does not support the audio element.
